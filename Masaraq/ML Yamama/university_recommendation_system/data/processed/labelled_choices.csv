@@ -1,0 +1,2 @@
+row_id,chosen_major,chosen_major_source,chosen_at,consent,predicted_top1_label,predicted_top1_prob,predicted_top2_label,predicted_top2_prob,predicted_top3_label,predicted_top3_prob
+13f41262-1f08-4162-9c82-64cfa329e4c7,Computer Engineering,ui,2025-08-29T12:20:22+03:00,True,Computer Science in the Job Market,0.6426698543835688,Nursing,0.2919957092080506,Cybersecurity,0.01578913665815913

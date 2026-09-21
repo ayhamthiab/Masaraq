@@ -1,0 +1,632 @@
+{
+  "social_factors": {
+    "weight": 0.2,
+    "questions": [
+      {
+        "id": "q1",
+        "text": "إلى أي درجة يؤثر رأي والديك في اختيار التخصص؟",
+        "type": "likert",
+        "options": [
+          "أوافق بشدة",
+          "أوافق",
+          "محايد",
+          "لا أوافق",
+          "لا أوافق بشدة"
+        ],
+        "field_weights": {
+          "Medicine": 0.2,
+          "Engineering": 0.1
+        }
+      },
+      {
+        "id": "q2",
+        "text": "هل ستختار تخصصًا مختلفًا لو كان رأي أهلك مخالف لرغبتك؟",
+        "type": "multiple_choice",
+        "options": [
+          "نعم",
+          "لا",
+          "ربما"
+        ],
+        "field_weights": {
+          "Medicine": 0.2,
+          "Engineering": 0.1
+        }
+      },
+      {
+        "id": "q3",
+        "text": "مدى أهمية أن يكون تخصصك ذو مكانة عالية في المجتمع؟",
+        "type": "likert",
+        "options": [
+          "أوافق بشدة",
+          "أوافق",
+          "محايد",
+          "لا أوافق",
+          "لا أوافق بشدة"
+        ],
+        "field_weights": {
+          "Medicine": 0.3,
+          "Engineering": 0.2,
+          "Business": 0.2,
+          "Law": 0.25
+        }
+      },
+      {
+        "id": "q4",
+        "text": "لو كان تخصص ذو مكانة اجتماعية عالية لكن لا تحبه، هل ستختاره؟",
+        "type": "multiple_choice",
+        "options": [
+          "نعم",
+          "لا",
+          "يعتمد"
+        ],
+        "field_weights": {
+          "Medicine": 0.2,
+          "Engineering": 0.2,
+          "Law": 0.2
+        }
+      },
+      {
+        "id": "q5",
+        "text": "ما مدى اهتمامك بفرص العمل المستقبلية عند اختيار التخصص؟",
+        "type": "likert",
+        "options": [
+          "أوافق بشدة",
+          "أوافق",
+          "محايد",
+          "لا أوافق",
+          "لا أوافق بشدة"
+        ],
+        "field_weights": {
+          "Business": 0.3,
+          "Engineering": 0.2,
+          "Medicine": 0.2,
+          "Digital Economy": 0.2
+        }
+      },
+      {
+        "id": "q6",
+        "text": "إذا كان التخصص الذي تحبه قليل الطلب في السوق، ماذا ستفعل؟",
+        "type": "multiple_choice",
+        "options": [
+          "أختاره",
+          "أبحث عن بديل",
+          "أختار تخصصًا قريبًا منه"
+        ],
+        "field_weights": {
+          "Business": 0.2,
+          "Engineering": 0.1
+        }
+      },
+      {
+        "id": "q7",
+        "text": "ما هو مستوى متوسط دخل الأسرة؟",
+        "type": "multiple_choice",
+        "options": [
+          "منخفض",
+          "متوسط",
+          "مرتفع"
+        ],
+        "field_weights": {
+          "Business": 0.1
+        }
+      }
+    ]
+  },
+  "personality": {
+    "weight": 0.3,
+    "questions": [
+      {
+        "id": "q8",
+        "text": "أشعر بالارتباك والتوتر عند التحدث أمام مجموعة من الأشخاص",
+        "type": "likert",
+        "options": [
+          "أوافق بشدة",
+          "أوافق",
+          "محايد",
+          "لا أوافق",
+          "لا أوافق بشدة"
+        ],
+        "field_weights": {
+          "Humanities": -0.2,
+          "Business": -0.1,
+          "Law": -0.15
+        }
+      },
+      {
+        "id": "q9",
+        "text": "هل تضطر لكتابة ما تود شرائه قبل الذهاب إلى السوق؟",
+        "type": "likert",
+        "options": [
+          "أوافق بشدة",
+          "أوافق",
+          "محايد",
+          "لا أوافق",
+          "لا أوافق بشدة"
+        ],
+        "field_weights": {
+          "Business": 0.2
+        }
+      },
+      {
+        "id": "q10",
+        "text": "أشعر بالمسؤولية عندما توكل إلي مهمة ما",
+        "type": "likert",
+        "options": [
+          "أوافق بشدة",
+          "أوافق",
+          "محايد",
+          "لا أوافق",
+          "لا أوافق بشدة"
+        ],
+        "field_weights": {
+          "Engineering": 0.2,
+          "Medicine": 0.2,
+          "Law": 0.2
+        }
+      },
+      {
+        "id": "q11",
+        "text": "إذا رأيت طفلًا يحاول قطع الشارع، لا أتردد لمساعدته",
+        "type": "likert",
+        "options": [
+          "أوافق بشدة",
+          "أوافق",
+          "محايد",
+          "لا أوافق",
+          "لا أوافق بشدة"
+        ],
+        "field_weights": {
+          "Medicine": 0.3,
+          "Humanities": 0.15,
+          "Sharia": 0.2,
+          "Nursing": 0.3,
+          "Midwifery": 0.3,
+          "Audiology and Speech Sciences": 0.2,
+          "Physical Therapy": 0.3,
+          "Anesthesia and Resuscitation": 0.2
+        }
+      },
+      {
+        "id": "q12",
+        "text": "أفضل العمل لوحدي عن العمل مع مجموعة",
+        "type": "likert",
+        "options": [
+          "أوافق بشدة",
+          "أوافق",
+          "محايد",
+          "لا أوافق",
+          "لا أوافق بشدة"
+        ],
+        "field_weights": {
+          "Science": 0.2,
+          "Engineering": 0.1
+        }
+      },
+      {
+        "id": "q13",
+        "text": "أمتنع أحيانًا عن المشاركة في الحصص الصفية بسبب التوتر",
+        "type": "likert",
+        "options": [
+          "أوافق بشدة",
+          "أوافق",
+          "محايد",
+          "لا أوافق",
+          "لا أوافق بشدة"
+        ],
+        "field_weights": {
+          "Humanities": -0.2
+        }
+      },
+      {
+        "id": "q14",
+        "text": "أنجح بالتأثير على الآخرين وإقناعهم",
+        "type": "likert",
+        "options": [
+          "أوافق بشدة",
+          "أوافق",
+          "محايد",
+          "لا أوافق",
+          "لا أوافق بشدة"
+        ],
+        "field_weights": {
+          "Business": 0.3,
+          "Humanities": 0.2,
+          "Law": 0.25
+        }
+      },
+      {
+        "id": "q15",
+        "text": "طلب منك صديقك إثبات أن الألم شعور حقيقي، ماذا تفعل؟",
+        "type": "multiple_choice",
+        "options": [
+          "تقرصه لتثبت",
+          "تشرح له عن النواقل",
+          "تشرح له حقيقة شعور الألم"
+        ],
+        "field_weights": {
+          "Science": 0.3,
+          "Medicine": 0.2
+        }
+      },
+      {
+        "id": "q16",
+        "text": "تم منحك عملًا في شركة ناشئة، ردة فعلك؟",
+        "type": "multiple_choice",
+        "options": [
+          "سأتحمس لذلك مع بقائي حذرًا",
+          "سأكون قلقًا",
+          "سأكون متحمسًا",
+          "غالبًا لا أجازف"
+        ],
+        "field_weights": {
+          "Business": 0.3,
+          "Engineering": 0.2
+        }
+      },
+      {
+        "id": "q17",
+        "text": "أي جملة توافق عليها أكثر؟",
+        "type": "multiple_choice",
+        "options": [
+          "الاختلاف والتنوع هما أساس الحياة",
+          "كل شيء له وقته ومكانه",
+          "من يصل مبكرًا يحصد نجاحًا",
+          "استرح واستمتع"
+        ],
+        "field_weights": {
+          "Fine Arts": 0.2,
+          "Humanities": 0.2,
+          "Sharia": 0.15
+        }
+      },
+      {
+        "id": "q18",
+        "text": "أفكر بشكل منطقي وأهتم بالقواعد أكثر من المشاعر",
+        "type": "likert",
+        "options": [
+          "أوافق بشدة",
+          "أوافق",
+          "محايد",
+          "لا أوافق",
+          "لا أوافق بشدة"
+        ],
+        "field_weights": {
+          "Engineering": 0.3,
+          "Science": 0.2,
+          "Law": 0.3
+        }
+      },
+      {
+        "id": "q19",
+        "text": "أستطيع الدراسة أو العمل خلف المكتب لمدة طويلة",
+        "type": "multiple_choice",
+        "options": [
+          "لا مشكلة لدي",
+          "فقط إذا كنت أحب ما أدرسه",
+          "مع تغيير المكان",
+          "لا أحب الأعمال الكتبية"
+        ],
+        "field_weights": {
+          "Engineering": 0.2,
+          "Business": 0.2
+        }
+      }
+    ]
+  },
+  "skills_and_preferences": {
+    "weight": 0.3,
+    "questions": [
+      {
+        "id": "q20",
+        "text": "أهرع عند رؤيتي للدم ولا أستطيع تحمله",
+        "type": "likert",
+        "options": [
+          "أوافق بشدة",
+          "أوافق",
+          "محايد",
+          "لا أوافق",
+          "لا أوافق بشدة"
+        ],
+        "field_weights": {
+          "Medicine": -0.4,
+          "Medical Laboratory Sciences": -0.2,
+          "Pharmacy": -0.2,
+          "Nursing": -0.3,
+          "Midwifery": -0.3,
+          "Medical Imaging": -0.1,
+          "Cardiopulmonary Perfusion Technology": -0.3,
+          "Anesthesia and Resuscitation": -0.3
+        }
+      },
+      {
+        "id": "q21",
+        "text": "أميل نحو التعليم الحرفي أو التطبيقي أكثر من الأكاديمي",
+        "type": "likert",
+        "options": [
+          "أوافق بشدة",
+          "أوافق",
+          "محايد",
+          "لا أوافق",
+          "لا أوافق بشدة"
+        ],
+        "field_weights": {
+          "Engineering": 0.2,
+          "Fine Arts": 0.1
+        }
+      },
+      {
+        "id": "q22",
+        "text": "أشعر بالفضول حيال التحديثات التكنولوجية",
+        "type": "likert",
+        "options": [
+          "أوافق بشدة",
+          "أوافق",
+          "محايد",
+          "لا أوافق",
+          "لا أوافق بشدة"
+        ],
+        "field_weights": {
+          "Engineering": 0.4,
+          "Science": 0.2,
+          "Medical Laboratory Sciences": 0.2,
+          "Pharmacy": 0.3,
+          "Optometry": 0.2,
+          "Medical Imaging": 0.2,
+          "Cardiopulmonary Perfusion Technology": 0.2,
+          "Digital Economy": 0.3,
+          "Computer Engineering": 0.4,
+          "Computer Science": 0.3,
+          "Computer Science in the Job Market": 0.3
+        }
+      },
+      {
+        "id": "q23",
+        "text": "أنتبه إلى الأخطاء اللغوية وأرغب بتصحيحها",
+        "type": "likert",
+        "options": [
+          "أوافق بشدة",
+          "أوافق",
+          "محايد",
+          "لا أوافق",
+          "لا أوافق بشدة"
+        ],
+        "field_weights": {
+          "Humanities": 0.3
+        }
+      },
+      {
+        "id": "q24",
+        "text": "أحرص على متابعة القضايا السياسية وتحليلها",
+        "type": "likert",
+        "options": [
+          "أوافق بشدة",
+          "أوافق",
+          "محايد",
+          "لا أوافق",
+          "لا أوافق بشدة"
+        ],
+        "field_weights": {
+          "Humanities": 0.25,
+          "Law": 0.3,
+          "Digital Media and Communication": 0.2
+        }
+      },
+      {
+        "id": "q25",
+        "text": "هل تعاني من حساسية جلدية أو تنفسية حيال النباتات؟",
+        "type": "likert",
+        "options": [
+          "أوافق بشدة",
+          "أوافق",
+          "محايد",
+          "لا أوافق",
+          "لا أوافق بشدة"
+        ],
+        "field_weights": {
+          "Medicine": -0.2,
+          "Medical Laboratory Sciences": -0.1,
+          "Pharmacy": -0.2,
+          "Nursing": -0.1,
+          "Audiology and Speech Sciences": -0.1
+        }
+      },
+      {
+        "id": "q26",
+        "text": "هل تتميز بأسلوب لباس مختلف وملفت؟",
+        "type": "likert",
+        "options": [
+          "أوافق بشدة",
+          "أوافق",
+          "محايد",
+          "لا أوافق",
+          "لا أوافق بشدة"
+        ],
+        "field_weights": {
+          "Fine Arts": 0.3
+        }
+      },
+      {
+        "id": "q27",
+        "text": "ما هو الرقم الذي لا ينتمي لمجموعة الأرقام؟",
+        "type": "multiple_choice",
+        "options": [
+          "لا أعرف",
+          "48",
+          "26",
+          "1"
+        ],
+        "field_weights": {
+          "Science": 0.3,
+          "Engineering": 0.2
+        }
+      },
+      {
+        "id": "q28",
+        "text": "ما هي الكلمة التي لا تنتمي لبقية الكلمات؟",
+        "type": "multiple_choice",
+        "options": [
+          "عادل",
+          "منحاز",
+          "صائب",
+          "منصف"
+        ],
+        "field_weights": {
+          "Humanities": 0.3,
+          "Law": 0.2
+        }
+      },
+      {
+        "id": "q29",
+        "text": "هل يجوز لأي رجل عربي الزواج من أخت أرملته؟",
+        "type": "multiple_choice",
+        "options": [
+          "يجوز له ذلك بعد الطلاق",
+          "لا مشكلة إن لم يكن عربي",
+          "لن يستطيع الزواج",
+          "لا أعرف"
+        ],
+        "field_weights": {
+          "Humanities": 0.2,
+          "Science": 0.1,
+          "Sharia": 0.3
+        }
+      },
+      {
+        "id": "q30",
+        "text": "ما هو اللون الذي استخدمته لتلوين كلمة 'بني'؟",
+        "type": "multiple_choice",
+        "options": [
+          "زهري",
+          "أخضر",
+          "أصفر",
+          "لا أتذكر"
+        ],
+        "field_weights": {
+          "Humanities": 0.3,
+          "Fine Arts": 0.3
+        }
+      },
+      {
+        "id": "q31",
+        "text": "ما هو لون الكوب؟",
+        "type": "multiple_choice",
+        "options": [
+          "زهري",
+          "أصفر",
+          "أزرق",
+          "لا أتذكر"
+        ],
+        "field_weights": {
+          "Humanities": 0.3,
+          "Fine Arts": 0.3,
+          "Digital Media and Communication": 0.2
+        }
+      }
+    ]
+  },
+  "activities": {
+    "weight": 0.2,
+    "questions": [
+      {
+        "id": "q32",
+        "text": "أحب ممارسة:",
+        "type": "multiple_choice",
+        "options": [
+          "الرسم والتلوين",
+          "العزف على آلة موسيقية",
+          "التصوير الفوتوغرافي",
+          "الكتابة والتأليف"
+        ],
+        "field_weights": {
+          "Fine Arts": 0.4,
+          "Physical Therapy": 0.2
+        }
+      },
+      {
+        "id": "q33",
+        "text": "أحب متابعة أفلام:",
+        "type": "multiple_choice",
+        "options": [
+          "الغموض والتشويق",
+          "التحقيقات البوليسية",
+          "الخيال والخدع",
+          "الدرامية أو الكوميدية",
+          "العلمية أو الخيال العلمي"
+        ],
+        "field_weights": {
+          "Fine Arts": 0.2,
+          "Science": 0.2,
+          "Law": 0.15
+        }
+      },
+      {
+        "id": "q34",
+        "text": "أحب الأنشطة الخارجية:",
+        "type": "multiple_choice",
+        "options": [
+          "ركوب الدراجة",
+          "السباحة",
+          "التخييم والرحلات",
+          "ممارسة الألعاب الرياضية"
+        ],
+        "field_weights": {
+          "Fine Arts": 0.1,
+          "Humanities": 0.1
+        }
+      },
+      {
+        "id": "q35",
+        "text": "أستمتع أكثر بـ:",
+        "type": "multiple_choice",
+        "options": [
+          "تصميم وبرمجة الكمبيوتر",
+          "تصوير وصناعة الفيديوهات",
+          "إجراء التجارب العلمية",
+          "تعلم لغات جديدة"
+        ],
+        "field_weights": {
+          "Engineering": 0.3,
+          "Science": 0.2,
+          "Fine Arts": 0.2,
+          "Medical Laboratory Sciences": 0.2,
+          "Pharmacy": 0.2,
+          "Optometry": 0.1,
+          "Computer Engineering": 0.4,
+          "Computer Science": 0.3,
+          "Computer Science in the Job Market": 0.3
+        }
+      },
+      {
+        "id": "q36",
+        "text": "عندما أكون لوحدي أحب:",
+        "type": "multiple_choice",
+        "options": [
+          "الاستماع للموسيقى أو البودكاست",
+          "قراءة كتاب أو مجلة",
+          "كتابة مذكرات أو قصص",
+          "مشاهدة فيديوهات تعليمية"
+        ],
+        "field_weights": {
+          "Fine Arts": 0.2,
+          "Humanities": 0.2
+        }
+      },
+      {
+        "id": "q37",
+        "text": "أجد نفسي أكثر إبداعًا عندما:",
+        "type": "multiple_choice",
+        "options": [
+          "أعمل على مشروع فني",
+          "أجرب تجربة علمية",
+          "أحل لغز أو تحدي",
+          "أبتكر قصة أو مشهد"
+        ],
+        "field_weights": {
+          "Fine Arts": 0.3,
+          "Science": 0.2,
+          "Engineering": 0.2
+        }
+      }
+    ]
+  }
+}

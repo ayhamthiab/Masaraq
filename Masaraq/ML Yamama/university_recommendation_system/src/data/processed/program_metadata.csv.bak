@@ -1,0 +1,76 @@
+program_name,faculty_name,core_subjects,min_gpa_regular,min_gpa_parallel,unemployment_rate,expected_salary,future_jobs,description
+Biology and Biotechnology,Science,"['Biology', 'Chemistry']",65,65,45,2800,"Biological research, pharmaceutical industry, medical laboratories",Study of biological sciences and biotechnology.
+Mathematics,Science,['Mathematics'],65,65,40,3000,"Teaching, data analysis, banking",Study of theoretical and applied mathematics.
+Mathematics and Data Science,Science,['Mathematics'],65,65,35,3500,"Data science, AI, technology companies",Integration of mathematics with data analysis.
+Physics,Science,"['Physics', 'Mathematics']",65,65,42,3200,"Physics research, energy industry",Study of the laws of nature and energy.
+Applied Physics Technology,Science,"['Physics', 'Mathematics']",65,65,40,3300,"Technology development, engineering",Application of physics in technology.
+Chemistry,Science,['Chemistry'],65,65,45,2900,"Chemical industry, laboratories",Study of materials and chemical reactions.
+Applied Chemistry,Science,['Chemistry'],65,65,42,3100,"Industry, research",Application of chemistry in industry.
+Molecular Diagnostics Technology,Science,"['Biology', 'Chemistry']",65,65,40,3400,Diagnostic laboratories,Molecular diagnostics techniques.
+Arabic Language and Literature,Humanities and Education,['Arabic'],65,65,50,2200,"Teaching, writing, media",Study of Arabic language and literature.
+English Language and Literature,Humanities and Education,['English'],65,65,48,2400,"Translation, teaching, international business",Study of English language and literature.
+French Language,Humanities and Education,['English'],65,65,50,2300,"Diplomacy, translation",Study of the French language.
+History,Humanities and Education,['History'],65,65,55,2100,"History teaching, research",Study of history.
+Geography,Humanities and Education,['Geography'],65,65,52,2300,"Geography, GIS",Study of geography.
+Tourism and Archaeology,Humanities and Education,[],65,65,45,2500,"Tourism, archaeology",Management of tourism and archaeology.
+Psychology – Psychological Counseling,Humanities and Education,[],65,65,50,2400,Psychological counseling,Psychology with counseling.
+Social Work,Humanities and Education,[],65,65,48,2100,Social work,Social work.
+Physical Education,Humanities and Education,[],65,65,50,2200,Sports coaching,Physical education.
+Kindergarten,Humanities and Education,[],65,65,48,2000,Kindergarten teaching,Kindergarten education.
+Elementary School Teacher,Humanities and Education,[],65,65,50,2100,Elementary teaching,Training elementary school teachers.
+Jurisprudence and Legislation,Sharia,['Islamic Education'],65,65,40,2500,"Sharia judiciary, teaching",Study of Islamic jurisprudence.
+Fundamentals of Religion,Sharia,['Islamic Education'],65,65,42,2400,"Preaching, religious teaching",Fundamentals of Islamic religion.
+Islamic Banking,Sharia,['Islamic Education'],65,65,38,3000,Islamic banking,Islamic banking.
+Civil Engineering,Engineering and Information Technology,"['Mathematics', 'Physics', 'Chemistry']",80,75,35,3500,"Construction, urban planning",Civil engineering.
+Geomatic Engineering,Engineering and Information Technology,"['Mathematics', 'Physics']",80,75,36,3400,"Surveying, GIS",Geomatic engineering.
+Architectural Engineering,Engineering and Information Technology,"['Mathematics', 'Physics']",80,75,38,3600,Building design,Architectural engineering.
+Construction Engineering,Engineering and Information Technology,"['Mathematics', 'Physics']",80,75,37,3400,Construction project management,Construction engineering.
+Planning Engineering,Engineering and Information Technology,"['Mathematics', 'Physics']",80,75,35,3300,Urban planning,Urban planning.
+Mechanical Engineering,Engineering and Information Technology,"['Mathematics', 'Physics', 'Chemistry']",80,75,36,3500,Mechanical industry,Mechanical engineering.
+Chemical Engineering,Engineering and Information Technology,"['Mathematics', 'Physics', 'Chemistry']",80,75,37,3600,Chemical industry,Chemical engineering.
+Industrial Engineering,Engineering and Information Technology,"['Mathematics', 'Physics']",80,75,35,3400,Industrial management,Industrial engineering.
+Computer Engineering,Engineering and Information Technology,"['Mathematics', 'Technology']",90,80,30,4500,Software development,Computer engineering.
+Electrical Engineering,Engineering and Information Technology,"['Mathematics', 'Physics']",80,75,36,3500,"Electricity, energy",Electrical engineering.
+Mechatronics Engineering,Engineering and Information Technology,"['Mathematics', 'Physics']",80,75,35,3600,Robotics,Mechatronics.
+Energy and Environmental Engineering,Engineering and Information Technology,"['Mathematics', 'Physics', 'Chemistry']",80,75,37,3500,Renewable energy,Energy and environment.
+Network Engineering,Engineering and Information Technology,"['Mathematics', 'Technology']",80,75,32,4000,"Networks, AI",Smart networks.
+Computer Science,Engineering and Information Technology,"['Mathematics', 'Technology']",70,65,30,4200,"Programming, IT",Computer science.
+Computer Science in the Job Market,Engineering and Information Technology,"['Mathematics', 'Technology']",70,65,31,4100,IT jobs,Applied computer science.
+Management Information Systems,Engineering and Information Technology,"['Mathematics', 'Technology']",70,65,33,3800,Information management,MIS.
+Cybersecurity,Engineering and Information Technology,"['Mathematics', 'Technology']",70,65,28,4300,Information security,Cybersecurity.
+Human Medicine,Medicine and Health Sciences,"['Mathematics', 'Physics', 'Biology']",95,85,35,4500,"General practitioner, medical specialties",Human medicine.
+Dentistry,Medicine and Health Sciences,"['Mathematics', 'Physics', 'Biology']",98,85,36,4200,Dentistry,Dentistry.
+Pharmacy,Medicine and Health Sciences,"['Mathematics', 'Physics', 'Biology']",90,80,38,3800,Pharmacist,Pharmacy.
+Optometry,Medicine and Health Sciences,"['Physics', 'Biology']",80,70,40,3400,Optometry,Optics sciences.
+Medical Laboratory Sciences,Medicine and Health Sciences,"['Biology', 'Chemistry']",85,70,38,3500,Medical laboratories,Medical laboratory sciences.
+Medical Imaging,Medicine and Health Sciences,"['Physics', 'Biology']",75,70,40,3300,Medical imaging,Medical imaging.
+Audiology and Speech Sciences,Medicine and Health Sciences,['Biology'],85,70,38,3400,Audiology and speech,Audiology and speech.
+Physical Therapy,Medicine and Health Sciences,"['Biology', 'Physics']",75,70,40,3500,Physical therapy,Physical therapy.
+Cardiopulmonary Perfusion Technology,Medicine and Health Sciences,['Biology'],80,70,37,3600,Cardiopulmonary perfusion,Cardiopulmonary perfusion.
+Anesthesia and Resuscitation,Medicine and Health Sciences,['Biology'],80,70,38,3400,Anesthesia,Technical anesthesia.
+Nursing,Medicine and Health Sciences,['Biology'],75,70,35,3200,Nursing,Nursing.
+Midwifery,Medicine and Health Sciences,['Biology'],75,70,36,3200,Midwifery,Midwifery.
+Digital Economy,Business and Communication,"['Mathematics', 'Management and Economics']",65,65,40,3000,"Economist, banking",Study of the digital economy.
+Digital Media and Communication,Business and Communication,[],65,65,42,2800,Digital media,Digital media.
+Radio and Television,Business and Communication,[],65,65,43,2600,"Radio, television",Radio and television.
+Public Relations,Business and Communication,[],80,65,40,2800,Public relations,Public relations.
+Accounting,Business and Communication,"['Mathematics', 'Management and Economics']",80,65,38,3300,"Accounting, auditing",Accounting.
+Business Administration,Business and Communication,['Management and Economics'],65,65,40,3100,"Business management, entrepreneurship",Business administration.
+Financial and Banking Sciences,Business and Communication,"['Mathematics', 'Management and Economics']",65,65,39,3500,"Banking, finance",Financial sciences.
+Financial Technology,Business and Communication,"['Mathematics', 'Technology']",70,65,35,3800,Fintech,Financial technology.
+Digital Marketing and Communication,Business and Communication,[],65,65,40,3000,Digital marketing,Digital marketing.
+Investment and Real Estate Development,Business and Communication,[],65,65,38,3300,Real estate,Real estate investment.
+Business Intelligence,Business and Communication,"['Mathematics', 'Technology']",65,65,36,3600,Business intelligence,Business Intelligence.
+Veterinary Medicine,Agriculture and Veterinary Medicine,"['Biology', 'Chemistry']",65,65,35,3500,Veterinary medicine,Veterinary medicine.
+Nutrition and Food Processing,Agriculture and Veterinary Medicine,"['Biology', 'Chemistry']",65,65,38,2800,Food industry,Nutrition and food processing.
+Agricultural Engineering,Agriculture and Veterinary Medicine,"['Mathematics', 'Biology']",65,65,40,3100,Agricultural engineering,Agricultural engineering.
+Law,Law and Political Science,['Arabic'],80,75,40,3800,"Law practice, judiciary",Study of law.
+Political Science,Law and Political Science,[],65,65,45,3000,"Politics, government administration",Political science.
+Music,Fine Arts,[],60,60,50,2200,"Music, artistic teaching",Study of music.
+Interior Design,Fine Arts,[],70,65,48,2900,Interior design,Interior design.
+Painting and Drawing,Fine Arts,[],60,60,50,2400,"Artist, painting",Painting and drawing.
+Graphic Design,Fine Arts,[],70,65,45,3200,"Graphics, advertising",Graphic design.
+Ceramic Art,Fine Arts,[],60,60,52,2200,Ceramics,Ceramic art.
+Game Design,Fine Arts,[],70,65,40,3600,Game development,Game design.
+Fashion Design,Fine Arts,[],65,65,48,2800,Fashion,Fashion design.
+Therapeutic Expressive Art,Fine Arts,[],70,65,45,2500,Therapeutic art,Therapeutic expressive art.

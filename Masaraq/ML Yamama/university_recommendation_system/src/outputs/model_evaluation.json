@@ -1,0 +1,65 @@
+{
+  "validation": {
+    "random_forest": {
+      "accuracy": 0.7371794871794872,
+      "precision_weighted": 0.7355698353431569,
+      "recall_weighted": 0.7371794871794872,
+      "f1_weighted": 0.7195869686079387,
+      "top3_accuracy": 0.8814102564102564,
+      "top5_accuracy": 0.9358974358974359
+    },
+    "gradient_boosting": {
+      "top3_accuracy": 0.875,
+      "top5_accuracy": 0.9503205128205128,
+      "top3_accuracy_elig": 0.7996794871794872,
+      "top5_accuracy_elig": 0.8621794871794872
+    },
+    "logistic_regression": {
+      "top3_accuracy": 0.8317307692307693,
+      "top5_accuracy": 0.9214743589743589
+    },
+    "ensemble": {
+      "val_top3": 0.8125,
+      "val_top5": 0.8605769230769231,
+      "weights": [
+        0.6666666666666666,
+        0.3333333333333333,
+        0.0
+      ]
+    }
+  },
+  "test": {
+    "random_forest": {
+      "accuracy": 0.719551282051282,
+      "precision_weighted": 0.7108847428946038,
+      "recall_weighted": 0.719551282051282,
+      "f1_weighted": 0.6996310624581091,
+      "top3_accuracy": 0.8173076923076923,
+      "top5_accuracy": 0.8621794871794872
+    },
+    "gradient_boosting": {
+      "accuracy": 0.7339743589743589,
+      "precision_weighted": 0.7357505490793533,
+      "recall_weighted": 0.7339743589743589,
+      "f1_weighted": 0.7289815514019508,
+      "top3_accuracy": 0.8092948717948718,
+      "top5_accuracy": 0.8589743589743589
+    },
+    "logistic_regression": {
+      "accuracy": 0.5881410256410257,
+      "precision_weighted": 0.5951793668802952,
+      "recall_weighted": 0.5881410256410257,
+      "f1_weighted": 0.5804465531582191,
+      "top3_accuracy": 0.7628205128205128,
+      "top5_accuracy": 0.8349358974358975
+    },
+    "ensemble": {
+      "accuracy": 0.6698717948717948,
+      "precision_weighted": 0.6766932536762731,
+      "recall_weighted": 0.6698717948717948,
+      "f1_weighted": 0.6523916839270105,
+      "top3_accuracy": 0.8189102564102564,
+      "top5_accuracy": 0.8525641025641025
+    }
+  }
+}

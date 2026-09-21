@@ -1,0 +1,71 @@
+{
+  "loaded_models": {
+    "random_forest": [
+      "Accounting",
+      "Agricultural Engineering",
+      "Applied Chemistry",
+      "Applied Physics Technology",
+      "Arabic Language and Literature",
+      "Architectural Engineering",
+      "Biology and Biotechnology",
+      "Business Administration",
+      "Business Intelligence",
+      "Ceramic Art"
+    ],
+    "gradient_boosting": [
+      "Accounting",
+      "Agricultural Engineering",
+      "Applied Chemistry",
+      "Applied Physics Technology",
+      "Arabic Language and Literature",
+      "Architectural Engineering",
+      "Biology and Biotechnology",
+      "Business Administration",
+      "Business Intelligence",
+      "Ceramic Art"
+    ],
+    "logistic_regression": [
+      "Accounting",
+      "Agricultural Engineering",
+      "Applied Chemistry",
+      "Applied Physics Technology",
+      "Arabic Language and Literature",
+      "Architectural Engineering",
+      "Biology and Biotechnology",
+      "Business Administration",
+      "Business Intelligence",
+      "Ceramic Art"
+    ],
+    "ensemble": [
+      "Accounting",
+      "Agricultural Engineering",
+      "Applied Chemistry",
+      "Applied Physics Technology",
+      "Arabic Language and Literature",
+      "Architectural Engineering",
+      "Biology and Biotechnology",
+      "Business Administration",
+      "Business Intelligence",
+      "Ceramic Art"
+    ]
+  },
+  "num_programs": 75,
+  "num_model_classes": 63,
+  "classes_not_in_programs_count": 0,
+  "programs_not_in_classes_count": 12,
+  "classes_not_in_programs_sample": [],
+  "programs_not_in_classes_sample": [
+    "anesthesia and resuscitation",
+    "audiology and speech sciences",
+    "cardiopulmonary perfusion technology",
+    "game design",
+    "interior design",
+    "medical imaging",
+    "medical laboratory sciences",
+    "midwifery",
+    "optometry",
+    "painting and drawing",
+    "pharmacy",
+    "physical therapy"
+  ]
+}

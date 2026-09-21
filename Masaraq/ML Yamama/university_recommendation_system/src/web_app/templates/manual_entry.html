@@ -1,0 +1,406 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <!-- START: Title Updated -->
+    {% if language == 'ar' %}
+        المعلومات الأكاديمية والشخصية | نظام توصية الجامعات الفلسطينية
+    {% else %}
+        Academic & Personal Data | Palestinian University Recommendation System
+    {% endif %}
+    <!-- END: Title Updated -->
+{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center animate-fade-in">
+    <div class="col-lg-10">
+        <!-- START: Step Indicator Updated to 3 steps -->
+        <div class="step-indicator-modern">
+            <div class="step-modern active">
+                <div class="step-number-modern">1</div>
+                <div class="step-title-modern">
+                    {% if language == 'ar' %}المعلومات الأكاديمية والشخصية{% else %}Academic & Personal Data{% endif %}
+                </div>
+            </div>
+            <div class="step-modern">
+                <div class="step-number-modern">2</div>
+                <div class="step-title-modern">
+                    {% if language == 'ar' %}تقييم الاهتمامات{% else %}Interest Assessment{% endif %}
+                </div>
+            </div>
+            <div class="step-modern">
+                <div class="step-number-modern">3</div>
+                <div class="step-title-modern">
+                    {% if language == 'ar' %}النتائج والتوصيات{% else %}Recommendations{% endif %}
+                </div>
+            </div>
+        </div>
+        <!-- END: Step Indicator Updated -->
+
+        <div class="card-modern animate-slide-up">
+            <!-- START: Header Updated -->
+            <div class="card-header-modern text-center">
+                <h2 class="h3 mb-0">
+                    <i class="fas fa-user-graduate me-2"></i>
+                    {% if language == 'ar' %}
+                        المعلومات الأكاديمية والشخصية
+                    {% else %}
+                        Academic & Personal Data
+                    {% endif %}
+                </h2>
+            </div>
+            <!-- END: Header Updated -->
+            <div class="card-body-modern">
+                {% if diploma_data and diploma_data.get('scores') %}
+                <div class="alert alert-success-modern">
+                    <i class="fas fa-check-circle me-2"></i>
+                    {% if language == 'ar' %}
+                        تم استخراج بعض المعلومات من شهادتك. يرجى التحقق منها وتعديلها وإكمال البيانات الشخصية.
+                    {% else %}
+                        Some information was extracted from your diploma. Please verify, edit if necessary, and complete your personal data.
+                    {% endif %}
+                </div>
+                {% else %}
+                <div class="alert alert-info-modern">
+                    <i class="fas fa-info-circle me-2"></i>
+                    {% if language == 'ar' %}
+                        يرجى إدخال معلوماتك الشخصية والأكاديمية يدويًا.
+                    {% else %}
+                        Please enter your personal and academic information manually.
+                    {% endif %}
+                </div>
+                {% endif %}
+
+                <form method="POST" class="mt-4">
+                    <!-- START: Personal Info Fields Added -->
+                    <h5 class="mb-3">{% if language == 'ar' %}المعلومات الشخصية{% else %}Personal Information{% endif %}</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- First Name -->
+                            <div class="mb-4">
+                                <label for="first_name" class="form-label-modern">
+                                    {% if language == 'ar' %}الاسم الأول{% else %}First Name{% endif %}
+                                </label>
+                                <input type="text" class="form-control-modern" id="first_name" name="first_name" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <!-- Family Name -->
+                            <div class="mb-4">
+                                <label for="family_name" class="form-label-modern">
+                                    {% if language == 'ar' %}اسم العائلة{% else %}Family Name{% endif %}
+                                </label>
+                                <input type="text" class="form-control-modern" id="family_name" name="family_name" required>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+                    <!-- END: Personal Info Fields Added -->
+
+                    <h5 class="mb-3">{% if language == 'ar' %}المعلومات الأكاديمية{% else %}Academic Information{% endif %}</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- Tawjihi Stream (UPDATED) -->
+                            <div class="mb-4">
+                                <label for="stream" class="form-label-modern">
+                                    {% if language == 'ar' %}فرع التوجيهي{% else %}Tawjihi Stream{% endif %}
+                                </label>
+                                <select class="form-control-modern" id="stream" name="stream" required>
+                                    <option value="" selected disabled>{% if language == 'ar' %}اختر الفرع{% else %}Select Stream{% endif %}</option>
+
+                                    <option value="scientific"
+                                      {% if diploma_data and diploma_data.stream in ['scientific','Scientific','علمي'] %}selected{% endif %}>
+                                      {% if language == 'ar' %}علمي{% else %}Scientific{% endif %}
+                                    </option>
+
+                                    <option value="literary"
+                                      {% if diploma_data and diploma_data.stream in ['literary','Literary','ادبي','أدبي'] %}selected{% endif %}>
+                                      {% if language == 'ar' %}أدبي{% else %}Literary{% endif %}
+                                    </option>
+
+                                    <option value="sharia"
+                                      {% if diploma_data and diploma_data.stream in ['sharia','Sharia','شرعي'] %}selected{% endif %}>
+                                      {% if language == 'ar' %}شرعي{% else %}Sharia{% endif %}
+                                    </option>
+
+                                    <option value="agricultural"
+                                      {% if diploma_data and diploma_data.stream in ['agricultural','Agricultural','زراعي'] %}selected{% endif %}>
+                                      {% if language == 'ar' %}زراعي{% else %}Agricultural{% endif %}
+                                    </option>
+
+                                    <option value="industrial"
+                                      {% if diploma_data and diploma_data.stream in ['industrial','Industrial','صناعي'] %}selected{% endif %}>
+                                      {% if language == 'ar' %}صناعي{% else %}Industrial{% endif %}
+                                    </option>
+
+                                    <option value="hotel_home_econ"
+                                      {% if diploma_data and diploma_data.stream in ['hotel_home_econ','Hotel and Home Economics','فندقي او الاقتصاد منزلي','فندقي أو الاقتصاد منزلي'] %}selected{% endif %}>
+                                      {% if language == 'ar' %}فندقي أو الاقتصاد منزلي{% else %}Hotel and Home Economics{% endif %}
+                                    </option>
+
+                                    <option value="home_economics"
+                                      {% if diploma_data and diploma_data.stream in ['home_economics','Home Economics',' الاقتصاد منزلي','الاقتصاد منزلي','الاقتصاد المنزلي'] %}selected{% endif %}>
+                                      {% if language == 'ar' %}الاقتصاد المنزلي{% else %}Home Economics{% endif %}
+                                    </option>
+
+                                    <option value="technological"
+                                      {% if diploma_data and diploma_data.stream in ['technological','Technological','تكنولوجي'] %}selected{% endif %}>
+                                      {% if language == 'ar' %}تكنولوجي{% else %}Technological{% endif %}
+                                    </option>
+
+                                    <option value="entrepreneurship"
+                                      {% if diploma_data and diploma_data.stream in ['entrepreneurship','Entrepreneurship and Business','ريادة الأعمال'] %}selected{% endif %}>
+                                      {% if language == 'ar' %}ريادة الأعمال{% else %}Entrepreneurship and Business{% endif %}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <!-- Overall Average -->
+                            <div class="mb-4">
+                                <label for="score_overall_average" class="form-label-modern">
+                                    {% if language == 'ar' %}المعدل العام{% else %}Overall Average{% endif %}
+                                </label>
+                                <input type="number" class="form-control-modern" id="score_overall_average" name="score_overall_average" min="50" max="100" step="0.1" required
+                                       value="{{ diploma_data.get('scores', {}).get('overall_average', '') }}" placeholder="e.g., 95.5">
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <!-- START: CORE SUBJECTS PER BRANCH (UPDATED) -->
+                    <div class="row subject-fields" id="subjects-container">
+
+                        <!-- Scientific: Mathematics, Physics, Chemistry, Biology -->
+                        <div class="col-12 stream-group scientific" style="display:none">
+                          <h6 class="mb-3">{% if language == 'ar' %}مواد العلمي{% else %}Scientific Core Subjects{% endif %}</h6>
+                          <div class="row">
+                            <div class="col-md-6 mb-4">
+                              <label class="form-label-modern">{% if language == 'ar' %}الرياضيات{% else %}Mathematics{% endif %}</label>
+                              <input type="number" class="form-control-modern" name="score_mathematics" min="0" max="100" step="0.1"
+                                     value="{{ diploma_data.get('scores', {}).get('mathematics','') }}">
+                            </div>
+                            <div class="col-md-6 mb-4">
+                              <label class="form-label-modern">{% if language == 'ar' %}الفيزياء{% else %}Physics{% endif %}</label>
+                              <input type="number" class="form-control-modern" name="score_physics" min="0" max="100" step="0.1"
+                                     value="{{ diploma_data.get('scores', {}).get('physics','') }}">
+                            </div>
+                            <div class="col-md-6 mb-4">
+                              <label class="form-label-modern">{% if language == 'ar' %}الكيمياء{% else %}Chemistry{% endif %}</label>
+                              <input type="number" class="form-control-modern" name="score_chemistry" min="0" max="100" step="0.1"
+                                     value="{{ diploma_data.get('scores', {}).get('chemistry','') }}">
+                            </div>
+                            <div class="col-md-6 mb-4">
+                              <label class="form-label-modern">{% if language == 'ar' %}الأحياء{% else %}Biology{% endif %}</label>
+                              <input type="number" class="form-control-modern" name="score_biology" min="0" max="100" step="0.1"
+                                     value="{{ diploma_data.get('scores', {}).get('biology','') }}">
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Literary: Arabic Language, English Language, History, Geography -->
+<div class="col-12 stream-group literary" style="display:none">
+  <h6 class="mb-3">{% if language == 'ar' %}مواد الأدبي{% else %}Literary Core Subjects{% endif %}</h6>
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <label class="form-label-modern">{% if language == 'ar' %}اللغة العربية{% else %}Arabic Language{% endif %}</label>
+      <input type="number" class="form-control-modern" name="score_arabic_language" min="0" max="100" step="0.1"
+             value="{{ (diploma_data.get('scores', {}) or {}).get('arabic_language') or (diploma_data.get('scores', {}) or {}).get('arabic') or '' }}">
+    </div>
+    <div class="col-md-6 mb-4">
+      <label class="form-label-modern">{% if language == 'ar' %}اللغة الإنجليزية{% else %}English Language{% endif %}</label>
+      <input type="number" class="form-control-modern" name="score_english_language" min="0" max="100" step="0.1"
+             value="{{ (diploma_data.get('scores', {}) or {}).get('english_language') or (diploma_data.get('scores', {}) or {}).get('english') or '' }}">
+    </div>
+    <div class="col-md-6 mb-4">
+      <label class="form-label-modern">{% if language == 'ar' %}التاريخ{% else %}History{% endif %}</label>
+      <input type="number" class="form-control-modern" name="score_history" min="0" max="100" step="0.1"
+             value="{{ (diploma_data.get('scores', {}) or {}).get('history','') }}">
+    </div>
+    <div class="col-md-6 mb-4">
+      <label class="form-label-modern">{% if language == 'ar' %}الجغرافيا{% else %}Geography{% endif %}</label>
+      <input type="number" class="form-control-modern" name="score_geography" min="0" max="100" step="0.1"
+             value="{{ (diploma_data.get('scores', {}) or {}).get('geography','') }}">
+    </div>
+  </div>
+</div>
+
+                        <!-- Sharia: The Holy Quran and its sciences, Arabic Language -->
+<div class="col-12 stream-group sharia" style="display:none">
+  <h6 class="mb-3">{% if language == 'ar' %}مواد الشرعي{% else %}Sharia Core Subjects{% endif %}</h6>
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <label class="form-label-modern">{% if language == 'ar' %}القرآن الكريم وعلومه{% else %}The Holy Quran and its sciences{% endif %}</label>
+      <input type="number" class="form-control-modern" name="score_quran_sciences" min="0" max="100" step="0.1"
+             value="{{ (diploma_data.get('scores', {}) or {}).get('quran_sciences') or (diploma_data.get('scores', {}) or {}).get('quran') or '' }}">
+    </div>
+    <div class="col-md-6 mb-4">
+      <label class="form-label-modern">{% if language == 'ar' %}اللغة العربية{% else %}Arabic Language{% endif %}</label>
+      <input type="number" class="form-control-modern" name="score_arabic_language" min="0" max="100" step="0.1"
+             value="{{ (diploma_data.get('scores', {}) or {}).get('arabic_language') or (diploma_data.get('scores', {}) or {}).get('arabic') or '' }}">
+    </div>
+  </div>
+</div>
+
+                        <!-- Agricultural: Biology, Chemistry -->
+                        <div class="col-12 stream-group agricultural" style="display:none">
+                            <h6 class="mb-3">{% if language == 'ar' %}مواد الزراعي{% else %}Agricultural Core Subjects{% endif %}</h6>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <label class="form-label-modern">{% if language == 'ar' %}الأحياء{% else %}Biology{% endif %}</label>
+                                    <input type="number" class="form-control-modern" name="score_biology" min="0" max="100" step="0.1"
+                                           value="{{ diploma_data.get('scores', {}).get('biology','') }}">
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <label class="form-label-modern">{% if language == 'ar' %}الكيمياء{% else %}Chemistry{% endif %}</label>
+                                    <input type="number" class="form-control-modern" name="score_chemistry" min="0" max="100" step="0.1"
+                                           value="{{ diploma_data.get('scores', {}).get('chemistry','') }}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Industrial: Mathematics, Physics, Technology -->
+                        <div class="col-12 stream-group industrial" style="display:none">
+                            <h6 class="mb-3">{% if language == 'ar' %}مواد الصناعي{% else %}Industrial Core Subjects{% endif %}</h6>
+                            <div class="row">
+                                <div class="col-md-4 mb-4">
+                                    <label class="form-label-modern">{% if language == 'ar' %}الرياضيات{% else %}Mathematics{% endif %}</label>
+                                    <input type="number" class="form-control-modern" name="score_mathematics" min="0" max="100" step="0.1"
+                                           value="{{ diploma_data.get('scores', {}).get('mathematics','') }}">
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <label class="form-label-modern">{% if language == 'ar' %}الفيزياء{% else %}Physics{% endif %}</label>
+                                    <input type="number" class="form-control-modern" name="score_physics" min="0" max="100" step="0.1"
+                                           value="{{ diploma_data.get('scores', {}).get('physics','') }}">
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <label class="form-label-modern">{% if language == 'ar' %}التكنولوجيا{% else %}Technology{% endif %}</label>
+                                    <input type="number" class="form-control-modern" name="score_technology" min="0" max="100" step="0.1"
+                                           value="{{ diploma_data.get('scores', {}).get('technology','') }}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hotel and Home Economics: Management and Economics -->
+                        <div class="col-12 stream-group hotel_home_econ" style="display:none">
+                            <h6 class="mb-3">{% if language == 'ar' %}مواد الفندقي/الاقتصاد المنزلي{% else %}Hotel & Home Economics Core{% endif %}</h6>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <label class="form-label-modern">{% if language == 'ar' %}الإدارة والاقتصاد{% else %}Management and Economics{% endif %}</label>
+                                    <input type="number" class="form-control-modern" name="score_management_economics" min="0" max="100" step="0.1"
+                                           value="{{ diploma_data.get('scores', {}).get('management_economics','') }}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Home Economics: Professional sciences -->
+                        <div class="col-12 stream-group home_economics" style="display:none">
+                            <h6 class="mb-3">{% if language == 'ar' %}مواد الاقتصاد المنزلي{% else %}Home Economics Core{% endif %}</h6>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <label class="form-label-modern">{% if language == 'ar' %}العلوم المهنية{% else %}Professional sciences{% endif %}</label>
+                                    <input type="number" class="form-control-modern" name="score_professional_sciences" min="0" max="100" step="0.1"
+                                           value="{{ diploma_data.get('scores', {}).get('professional_sciences','') }}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Technological: Technology, Mathematics -->
+                        <div class="col-12 stream-group technological" style="display:none">
+                            <h6 class="mb-3">{% if language == 'ar' %}مواد التكنولوجي{% else %}Technological Core Subjects{% endif %}</h6>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <label class="form-label-modern">{% if language == 'ar' %}التكنولوجيا{% else %}Technology{% endif %}</label>
+                                    <input type="number" class="form-control-modern" name="score_technology" min="0" max="100" step="0.1"
+                                           value="{{ diploma_data.get('scores', {}).get('technology','') }}">
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <label class="form-label-modern">{% if language == 'ar' %}الرياضيات{% else %}Mathematics{% endif %}</label>
+                                    <input type="number" class="form-control-modern" name="score_mathematics" min="0" max="100" step="0.1"
+                                           value="{{ diploma_data.get('scores', {}).get('mathematics','') }}">
+                                </div>
+                            </div>
+                        </div>
+
+                       <!-- Entrepreneurship and Business: Management and Economics -->
+<div class="col-12 stream-group entrepreneurship" style="display:none">
+  <h6 class="mb-3">{% if language == 'ar' %}مواد ريادة الأعمال{% else %}Entrepreneurship Core{% endif %}</h6>
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <label class="form-label-modern">{% if language == 'ar' %}الإدارة والاقتصاد{% else %}Management and Economics{% endif %}</label>
+      <input type="number" class="form-control-modern" name="score_management_economics" min="0" max="100" step="0.1"
+             value="{{ (diploma_data.get('scores', {}) or {}).get('management_economics') or (diploma_data.get('scores', {}) or {}).get('management_and_economics') or '' }}">
+    </div>
+  </div>
+</div>
+
+<!-- Hotel and Home Economics: Management and Economics (اختياري نفس الفallback) -->
+<div class="col-12 stream-group hotel_home_econ" style="display:none">
+  <h6 class="mb-3">{% if language == 'ar' %}مواد الفندقي/الاقتصاد المنزلي{% else %}Hotel & Home Economics Core{% endif %}</h6>
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <label class="form-label-modern">{% if language == 'ar' %}الإدارة والاقتصاد{% else %}Management and Economics{% endif %}</label>
+      <input type="number" class="form-control-modern" name="score_management_economics" min="0" max="100" step="0.1"
+             value="{{ (diploma_data.get('scores', {}) or {}).get('management_economics') or (diploma_data.get('scores', {}) or {}).get('management_and_economics') or '' }}">
+    </div>
+  </div>
+</div>
+
+                    <!-- END: CORE SUBJECTS PER BRANCH (UPDATED) -->
+
+                    <div class="alert alert-warning-modern">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        {% if language == 'ar' %}
+                            ملاحظة: يرجى ملء جميع الحقول المطلوبة للمتابعة.
+                        {% else %}
+                            Note: Please fill in all required fields to continue.
+                        {% endif %}
+                    </div>
+
+                    <!-- START: Button Updated -->
+                    <div class="text-center mt-5">
+                        <button type="submit" class="btn btn-gradient px-5 py-3">
+                            <i class="fas fa-arrow-right me-2"></i>
+                            {% if language == 'ar' %}
+                                متابعة إلى تقييم الاهتمامات
+                            {% else %}
+                                Continue to Interest Assessment
+                            {% endif %}
+                        </button>
+                    </div>
+                    <!-- END: Button Updated -->
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const streamSelect = document.getElementById('stream');
+    const groups = document.querySelectorAll('.stream-group');
+
+    function updateFieldVisibility() {
+        const v = streamSelect ? streamSelect.value : '';
+        groups.forEach(g => {
+            const isVisible = g.classList.contains(v);
+            g.style.display = isVisible ? 'block' : 'none';
+            // فعّل حقول المجموعة الظاهرة، وعطّل بقية الحقول كي لا تُرسل
+            g.querySelectorAll('input, select, textarea').forEach(inp => {
+                inp.disabled = !isVisible;
+            });
+        });
+    }
+
+    if (streamSelect) {
+        streamSelect.addEventListener('change', updateFieldVisibility);
+    }
+
+    // تفعيل الحالة الابتدائية عند التحميل (استنادًا إلى قيمة الـ select إن وُجدت)
+    updateFieldVisibility();
+});
+</script>
+{% endblock %}

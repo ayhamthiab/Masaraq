@@ -1,0 +1,8 @@
+{
+  "gpa_strong": "Your GPA ({gpa}%) is well above the requirement, showing strong readiness.",
+  "gpa_borderline": "Your GPA ({gpa}%) is just around the requirement — with effort, you can succeed here.",
+  "interest_high": "This aligns with your passion in {interest_area} — imagine studying what excites you every day!",
+  "weakness_compensation": "Although your {weak_subject} score is a bit lower, your strength in {strong_subject} makes you a great fit.",
+  "career_opportunities": "This major opens career paths in {career_paths}. Current job market: unemployment {unemployment}%, avg salary {salary} NIS.",
+  "final_encouragement": "We believe you can shine in this path!"
+}

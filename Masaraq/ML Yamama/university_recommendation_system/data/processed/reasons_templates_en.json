@@ -1,0 +1,32 @@
+{
+  "FIRST_CHOICE": {
+    "intro": "🎯 TOP RECOMMENDATION: This is your ideal academic path!",
+    "gpa_strong": "Your outstanding GPA of {gpa}% makes you a perfect candidate for this highly competitive program.",
+    "gpa_good": "Your solid GPA of {gpa}% positions you well for success in this excellent program.",
+    "gpa_borderline": "Your GPA of {gpa}% meets the requirements, and we're confident this program will help you excel.",
+    "interest_match": "Your passion for {interest_area} ({interest_score}% interest level) makes this the perfect match for your career goals.",
+    "strength_highlight": "Your exceptional performance in {strong_subject} ({score}%) demonstrates you have exactly what it takes to lead in this field.",
+    "career_strong": "This field offers the best career prospects with {unemployment}% unemployment and excellent salaries averaging {salary} NIS.",
+    "final_strong": "This is where you belong! We strongly believe you'll thrive and become a leader in this field."
+  },
+  "SECOND_CHOICE": {
+    "intro": "🥈 EXCELLENT ALTERNATIVE: A strong choice that offers great opportunities!",
+    "gpa_strong": "Your excellent GPA of {gpa}% gives you a competitive edge in this respected program.",
+    "gpa_good": "Your GPA of {gpa}% aligns well with this program's standards and expectations.",
+    "gpa_borderline": "Your GPA of {gpa}% meets this program's requirements, offering you a solid path forward.",
+    "interest_match": "Your interest in {interest_area} ({interest_score}%) shows good potential for growth in this field.",
+    "strength_highlight": "Your strong performance in {strong_subject} ({score}%) indicates you have valuable skills for this area.",
+    "career_good": "This field provides solid career opportunities with {unemployment}% unemployment rate and competitive salaries around {salary} NIS.",
+    "final_good": "This is an excellent backup choice that could lead to a fulfilling and successful career."
+  },
+  "THIRD_CHOICE": {
+    "intro": "🥉 WORTH CONSIDERING: An interesting option to explore and consider.",
+    "gpa_strong": "Your high GPA of {gpa}% opens doors to this program, though it may not be your first choice.",
+    "gpa_good": "Your GPA of {gpa}% qualifies you for this program, which could surprise you with its opportunities.",
+    "gpa_borderline": "Your GPA of {gpa}% meets this program's entry requirements, offering another pathway to consider.",
+    "interest_match": "While {interest_area} ({interest_score}%) isn't your strongest interest, this field might spark new passions.",
+    "strength_highlight": "Your skills in {strong_subject} ({score}%) could be valuable in unexpected ways in this field.",
+    "career_explore": "This field offers {unemployment}% unemployment rate with average salaries of {salary} NIS - worth exploring further.",
+    "final_explore": "Keep this option open - sometimes the best opportunities come from unexpected directions!"
+  }
+}

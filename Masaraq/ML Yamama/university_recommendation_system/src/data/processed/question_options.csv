@@ -1,0 +1,163 @@
+question_id,type,category,code,text,order
+q1,likert,social_factors,1,أوافق بشدة,1
+q1,likert,social_factors,2,أوافق,2
+q1,likert,social_factors,3,محايد,3
+q1,likert,social_factors,4,لا أوافق,4
+q1,likert,social_factors,5,لا أوافق بشدة,5
+q2,multiple_choice,social_factors,1,نعم,1
+q2,multiple_choice,social_factors,2,لا,2
+q2,multiple_choice,social_factors,3,ربما,3
+q3,likert,social_factors,1,أوافق بشدة,1
+q3,likert,social_factors,2,أوافق,2
+q3,likert,social_factors,3,محايد,3
+q3,likert,social_factors,4,لا أوافق,4
+q3,likert,social_factors,5,لا أوافق بشدة,5
+q4,multiple_choice,social_factors,1,نعم,1
+q4,multiple_choice,social_factors,2,لا,2
+q4,multiple_choice,social_factors,3,يعتمد,3
+q5,likert,social_factors,1,أوافق بشدة,1
+q5,likert,social_factors,2,أوافق,2
+q5,likert,social_factors,3,محايد,3
+q5,likert,social_factors,4,لا أوافق,4
+q5,likert,social_factors,5,لا أوافق بشدة,5
+q6,multiple_choice,social_factors,1,أختاره,1
+q6,multiple_choice,social_factors,2,أبحث عن بديل,2
+q6,multiple_choice,social_factors,3,أختار تخصصًا قريبًا منه,3
+q7,multiple_choice,social_factors,1,منخفض,1
+q7,multiple_choice,social_factors,2,متوسط,2
+q7,multiple_choice,social_factors,3,مرتفع,3
+q8,likert,personality,1,أوافق بشدة,1
+q8,likert,personality,2,أوافق,2
+q8,likert,personality,3,محايد,3
+q8,likert,personality,4,لا أوافق,4
+q8,likert,personality,5,لا أوافق بشدة,5
+q9,likert,personality,1,أوافق بشدة,1
+q9,likert,personality,2,أوافق,2
+q9,likert,personality,3,محايد,3
+q9,likert,personality,4,لا أوافق,4
+q9,likert,personality,5,لا أوافق بشدة,5
+q10,likert,personality,1,أوافق بشدة,1
+q10,likert,personality,2,أوافق,2
+q10,likert,personality,3,محايد,3
+q10,likert,personality,4,لا أوافق,4
+q10,likert,personality,5,لا أوافق بشدة,5
+q11,likert,personality,1,أوافق بشدة,1
+q11,likert,personality,2,أوافق,2
+q11,likert,personality,3,محايد,3
+q11,likert,personality,4,لا أوافق,4
+q11,likert,personality,5,لا أوافق بشدة,5
+q12,likert,personality,1,أوافق بشدة,1
+q12,likert,personality,2,أوافق,2
+q12,likert,personality,3,محايد,3
+q12,likert,personality,4,لا أوافق,4
+q12,likert,personality,5,لا أوافق بشدة,5
+q13,likert,personality,1,أوافق بشدة,1
+q13,likert,personality,2,أوافق,2
+q13,likert,personality,3,محايد,3
+q13,likert,personality,4,لا أوافق,4
+q13,likert,personality,5,لا أوافق بشدة,5
+q14,likert,personality,1,أوافق بشدة,1
+q14,likert,personality,2,أوافق,2
+q14,likert,personality,3,محايد,3
+q14,likert,personality,4,لا أوافق,4
+q14,likert,personality,5,لا أوافق بشدة,5
+q15,multiple_choice,personality,1,تقرصه لتثبت,1
+q15,multiple_choice,personality,2,تشرح له عن النواقل,2
+q15,multiple_choice,personality,3,تشرح له حقيقة شعور الألم,3
+q16,multiple_choice,personality,1,سأتحمس لذلك مع بقائي حذرًا,1
+q16,multiple_choice,personality,2,سأكون قلقًا,2
+q16,multiple_choice,personality,3,سأكون متحمسًا,3
+q16,multiple_choice,personality,4,غالبًا لا أجازف,4
+q17,multiple_choice,personality,1,الاختلاف والتنوع هما أساس الحياة,1
+q17,multiple_choice,personality,2,كل شيء له وقته ومكانه,2
+q17,multiple_choice,personality,3,من يصل مبكرًا يحصد نجاحًا,3
+q17,multiple_choice,personality,4,استرح واستمتع,4
+q18,likert,personality,1,أوافق بشدة,1
+q18,likert,personality,2,أوافق,2
+q18,likert,personality,3,محايد,3
+q18,likert,personality,4,لا أوافق,4
+q18,likert,personality,5,لا أوافق بشدة,5
+q19,multiple_choice,personality,1,لا مشكلة لدي,1
+q19,multiple_choice,personality,2,فقط إذا كنت أحب ما أدرسه,2
+q19,multiple_choice,personality,3,مع تغيير المكان,3
+q19,multiple_choice,personality,4,لا أحب الأعمال الكتبية,4
+q20,likert,skills_and_preferences,1,أوافق بشدة,1
+q20,likert,skills_and_preferences,2,أوافق,2
+q20,likert,skills_and_preferences,3,محايد,3
+q20,likert,skills_and_preferences,4,لا أوافق,4
+q20,likert,skills_and_preferences,5,لا أوافق بشدة,5
+q21,likert,skills_and_preferences,1,أوافق بشدة,1
+q21,likert,skills_and_preferences,2,أوافق,2
+q21,likert,skills_and_preferences,3,محايد,3
+q21,likert,skills_and_preferences,4,لا أوافق,4
+q21,likert,skills_and_preferences,5,لا أوافق بشدة,5
+q22,likert,skills_and_preferences,1,أوافق بشدة,1
+q22,likert,skills_and_preferences,2,أوافق,2
+q22,likert,skills_and_preferences,3,محايد,3
+q22,likert,skills_and_preferences,4,لا أوافق,4
+q22,likert,skills_and_preferences,5,لا أوافق بشدة,5
+q23,likert,skills_and_preferences,1,أوافق بشدة,1
+q23,likert,skills_and_preferences,2,أوافق,2
+q23,likert,skills_and_preferences,3,محايد,3
+q23,likert,skills_and_preferences,4,لا أوافق,4
+q23,likert,skills_and_preferences,5,لا أوافق بشدة,5
+q24,likert,skills_and_preferences,1,أوافق بشدة,1
+q24,likert,skills_and_preferences,2,أوافق,2
+q24,likert,skills_and_preferences,3,محايد,3
+q24,likert,skills_and_preferences,4,لا أوافق,4
+q24,likert,skills_and_preferences,5,لا أوافق بشدة,5
+q25,likert,skills_and_preferences,1,أوافق بشدة,1
+q25,likert,skills_and_preferences,2,أوافق,2
+q25,likert,skills_and_preferences,3,محايد,3
+q25,likert,skills_and_preferences,4,لا أوافق,4
+q25,likert,skills_and_preferences,5,لا أوافق بشدة,5
+q26,likert,skills_and_preferences,1,أوافق بشدة,1
+q26,likert,skills_and_preferences,2,أوافق,2
+q26,likert,skills_and_preferences,3,محايد,3
+q26,likert,skills_and_preferences,4,لا أوافق,4
+q26,likert,skills_and_preferences,5,لا أوافق بشدة,5
+q27,multiple_choice,skills_and_preferences,1,لا أعرف,1
+q27,multiple_choice,skills_and_preferences,2,48,2
+q27,multiple_choice,skills_and_preferences,3,26,3
+q27,multiple_choice,skills_and_preferences,4,1,4
+q28,multiple_choice,skills_and_preferences,1,عادل,1
+q28,multiple_choice,skills_and_preferences,2,منحاز,2
+q28,multiple_choice,skills_and_preferences,3,صائب,3
+q28,multiple_choice,skills_and_preferences,4,منصف,4
+q29,multiple_choice,skills_and_preferences,1,يجوز له ذلك بعد الطلاق,1
+q29,multiple_choice,skills_and_preferences,2,لا مشكلة إن لم يكن عربي,2
+q29,multiple_choice,skills_and_preferences,3,لن يستطيع الزواج,3
+q29,multiple_choice,skills_and_preferences,4,لا أعرف,4
+q30,multiple_choice,skills_and_preferences,1,زهري,1
+q30,multiple_choice,skills_and_preferences,2,أخضر,2
+q30,multiple_choice,skills_and_preferences,3,أصفر,3
+q30,multiple_choice,skills_and_preferences,4,لا أتذكر,4
+q31,multiple_choice,skills_and_preferences,1,زهري,1
+q31,multiple_choice,skills_and_preferences,2,أصفر,2
+q31,multiple_choice,skills_and_preferences,3,أزرق,3
+q31,multiple_choice,skills_and_preferences,4,لا أتذكر,4
+q32,multiple_choice,activities,1,الرسم والتلوين,1
+q32,multiple_choice,activities,2,العزف على آلة موسيقية,2
+q32,multiple_choice,activities,3,التصوير الفوتوغرافي,3
+q32,multiple_choice,activities,4,الكتابة والتأليف,4
+q33,multiple_choice,activities,1,الغموض والتشويق,1
+q33,multiple_choice,activities,2,التحقيقات البوليسية,2
+q33,multiple_choice,activities,3,الخيال والخدع,3
+q33,multiple_choice,activities,4,الدرامية أو الكوميدية,4
+q33,multiple_choice,activities,5,العلمية أو الخيال العلمي,5
+q34,multiple_choice,activities,1,ركوب الدراجة,1
+q34,multiple_choice,activities,2,السباحة,2
+q34,multiple_choice,activities,3,التخييم والرحلات,3
+q34,multiple_choice,activities,4,ممارسة الألعاب الرياضية,4
+q35,multiple_choice,activities,1,تصميم وبرمجة الكمبيوتر,1
+q35,multiple_choice,activities,2,تصوير وصناعة الفيديوهات,2
+q35,multiple_choice,activities,3,إجراء التجارب العلمية,3
+q35,multiple_choice,activities,4,تعلم لغات جديدة,4
+q36,multiple_choice,activities,1,الاستماع للموسيقى أو البودكاست,1
+q36,multiple_choice,activities,2,قراءة كتاب أو مجلة,2
+q36,multiple_choice,activities,3,كتابة مذكرات أو قصص,3
+q36,multiple_choice,activities,4,مشاهدة فيديوهات تعليمية,4
+q37,multiple_choice,activities,1,أعمل على مشروع فني,1
+q37,multiple_choice,activities,2,أجرب تجربة علمية,2
+q37,multiple_choice,activities,3,أحل لغز أو تحدي,3
+q37,multiple_choice,activities,4,أبتكر قصة أو مشهد,4

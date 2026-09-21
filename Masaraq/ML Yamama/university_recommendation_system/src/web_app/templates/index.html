@@ -1,0 +1,597 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {% if language == 'ar' %}
+        مسارك - نظام توصية الجامعات الفلسطينية
+    {% else %}
+        MASARAK - Palestinian University Recommendation System
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section py-5 mb-5">
+    <div class="row align-items-center min-vh-75">
+        <div class="col-lg-6">
+            <div class="hero-content animate-slide-up">
+                <div class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-4">
+                    <i class="fas fa-rocket me-1"></i>
+                    {% if language == 'ar' %}
+                        اكتشف مسارك الأكاديمي
+                    {% else %}
+                        Discover Your Academic Path
+                    {% endif %}
+                </div>
+                
+                <h1 class="display-4 fw-bold mb-4">
+                    <span class="text-gradient">
+                        {% if language == 'ar' %}
+                            مسارك
+                        {% else %}
+                            MASARAK
+                        {% endif %}
+                    </span>
+                </h1>
+                
+                <p class="lead text-muted mb-5" style="font-size: 1.3rem; line-height: 1.6;">
+                    {% if language == 'ar' %}
+                        يساعدك النظام الذكي في اختيار أفضل التخصصات الجامعية المناسبة لك بناءً على نتائج التوجيهي، اهتماماتك الشخصية، وتطلعاتك المهنية
+                    {% else %}
+                        Our intelligent system helps you choose the best university fields based on your Tawjihi results, personal interests, and career aspirations
+                    {% endif %}
+                </p>
+                
+                <div class="d-flex flex-wrap gap-3 mb-4">
+                    <a href="{{ url_for('upload_diploma') }}" class="btn btn-gradient btn-lg px-4 py-3">
+                        <i class="fas fa-cloud-upload-alt me-2"></i>
+                        {% if language == 'ar' %}
+                            ابدأ برفع شهادة التوجيهي
+                        {% else %}
+                            Start with Diploma Upload
+                        {% endif %}
+                    </a>
+                    <a href="{{ url_for('manual_entry') }}" class="btn btn-glass btn-lg px-4 py-3">
+                        <i class="fas fa-keyboard me-2"></i>
+                        {% if language == 'ar' %}
+                            إدخال المعلومات يدوياً
+                        {% else %}
+                            Manual Data Entry
+                        {% endif %}
+                    </a>
+                </div>
+                
+                <div class="d-flex align-items-center text-muted">
+                    <div class="me-4">
+                        <i class="fas fa-users text-success me-2"></i>
+                        <span class="fw-semibold">10,000+</span>
+                        {% if language == 'ar' %}طالب{% else %}Students{% endif %}
+                    </div>
+                    <div class="me-4">
+                        <i class="fas fa-university text-primary me-2"></i>
+                        <span class="fw-semibold">50+</span>
+                        {% if language == 'ar' %}تخصص{% else %}Fields{% endif %}
+                    </div>
+                    <div>
+                        <i class="fas fa-chart-line text-warning me-2"></i>
+                        <span class="fw-semibold">95%</span>
+                        {% if language == 'ar' %}دقة{% else %}Accuracy{% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-6">
+            <div class="hero-visual text-center">
+                <div class="position-relative">
+                    <!-- Main illustration -->
+                    <div class="hero-circle-bg"></div>
+                    <div class="hero-illustration">
+                        <i class="fas fa-graduation-cap" style="font-size: 8rem; color: var(--primary-blue); opacity: 0.1;"></i>
+                    </div>
+                    
+                    <!-- Floating elements -->
+                    <div class="floating-element floating-1">
+                        <div class="glass-card p-3 text-center">
+                            <i class="fas fa-brain text-primary mb-2"></i>
+                            <div class="small fw-semibold">
+                                {% if language == 'ar' %}ذكاء اصطناعي{% else %}AI Powered{% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="floating-element floating-2">
+                        <div class="glass-card p-3 text-center">
+                            <i class="fas fa-chart-bar text-success mb-2"></i>
+                            <div class="small fw-semibold">
+                                {% if language == 'ar' %}تحليل دقيق{% else %}Accurate Analysis{% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="floating-element floating-3">
+                        <div class="glass-card p-3 text-center">
+                            <i class="fas fa-target text-warning mb-2"></i>
+                            <div class="small fw-semibold">
+                                {% if language == 'ar' %}هدف واضح{% else %}Clear Goals{% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section py-5 mb-5">
+    <div class="text-center mb-5">
+        <h2 class="display-6 fw-bold mb-3">
+            {% if language == 'ar' %}
+                كيف نساعدك في اتخاذ القرار الصحيح؟
+            {% else %}
+                How We Help You Make the Right Decision?
+            {% endif %}
+        </h2>
+        <p class="lead text-muted">
+            {% if language == 'ar' %}
+                نستخدم تقنيات متقدمة لتحليل بياناتك وتقديم توصيات مخصصة
+            {% else %}
+                We use advanced techniques to analyze your data and provide personalized recommendations
+            {% endif %}
+        </p>
+    </div>
+    
+    <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+            <div class="card-modern text-center h-100">
+                <div class="card-body-modern">
+                    <div class="feature-icon-modern mb-4">
+                        <div class="icon-circle bg-primary bg-opacity-10">
+                            <i class="fas fa-chart-line text-primary"></i>
+                        </div>
+                    </div>
+                    <h3 class="h4 fw-bold mb-3">
+                        {% if language == 'ar' %}
+                            تحليل الأداء الأكاديمي
+                        {% else %}
+                            Academic Performance Analysis
+                        {% endif %}
+                    </h3>
+                    <p class="text-muted">
+                        {% if language == 'ar' %}
+                            نحلل نتائج التوجيهي بدقة ونحدد نقاط القوة والضعف لتوجيهك نحو التخصص المناسب
+                        {% else %}
+                            We accurately analyze your Tawjihi results and identify strengths and weaknesses to guide you to the right field
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+            <div class="card-modern text-center h-100">
+                <div class="card-body-modern">
+                    <div class="feature-icon-modern mb-4">
+                        <div class="icon-circle bg-success bg-opacity-10">
+                            <i class="fas fa-heart text-success"></i>
+                        </div>
+                    </div>
+                    <h3 class="h4 fw-bold mb-3">
+                        {% if language == 'ar' %}
+                            تقييم الاهتمامات والميول
+                        {% else %}
+                            Interest & Personality Assessment
+                        {% endif %}
+                    </h3>
+                    <p class="text-muted">
+                        {% if language == 'ar' %}
+                            نقيم اهتماماتك الشخصية وميولك المهنية لضمان اختيار تخصص تحبه وتبدع فيه
+                        {% else %}
+                            We assess your personal interests and career inclinations to ensure you choose a field you love and excel in
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+            <div class="card-modern text-center h-100">
+                <div class="card-body-modern">
+                    <div class="feature-icon-modern mb-4">
+                        <div class="icon-circle bg-warning bg-opacity-10">
+                            <i class="fas fa-bullseye text-warning"></i>
+                        </div>
+                    </div>
+                    <h3 class="h4 fw-bold mb-3">
+                        {% if language == 'ar' %}
+                            توصيات مخصصة ودقيقة
+                        {% else %}
+                            Personalized & Accurate Recommendations
+                        {% endif %}
+                    </h3>
+                    <p class="text-muted">
+                        {% if language == 'ar' %}
+                            نقدم لك أفضل 3 توصيات مخصصة مع تفسير مفصل وفرص العمل المستقبلية
+                        {% else %}
+                            We provide your top 3 personalized recommendations with detailed explanations and future career opportunities
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process Section -->
+<section class="process-section py-5 mb-5">
+    <div class="glass-card">
+        <div class="card-body-modern">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold mb-3">
+                    {% if language == 'ar' %}
+                        كيف يعمل النظام؟
+                    {% else %}
+                        How Does It Work?
+                    {% endif %}
+                </h2>
+                <p class="lead text-muted">
+                    {% if language == 'ar' %}
+                        أربع خطوات بسيطة للوصول إلى التوصية المثالية
+                    {% else %}
+                        Four simple steps to reach the perfect recommendation
+                    {% endif %}
+                </p>
+            </div>
+            
+            <div class="step-indicator-modern">
+                <div class="step-modern">
+                    <div class="step-number-modern">1</div>
+                    <div class="step-title-modern">
+                        {% if language == 'ar' %}
+                            رفع الشهادة
+                        {% else %}
+                            Upload Diploma
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="step-modern">
+                    <div class="step-number-modern">2</div>
+                    <div class="step-title-modern">
+                        {% if language == 'ar' %}
+                            المعلومات الشخصية
+                        {% else %}
+                            Personal Info
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="step-modern">
+                    <div class="step-number-modern">3</div>
+                    <div class="step-title-modern">
+                        {% if language == 'ar' %}
+                            تقييم الاهتمامات
+                        {% else %}
+                            Interest Assessment
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="step-modern">
+                    <div class="step-number-modern">4</div>
+                    <div class="step-title-modern">
+                        {% if language == 'ar' %}
+                            النتائج والتوصيات
+                        {% else %}
+                            Get Recommendations
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion mt-5" id="processAccordion">
+                <div class="accordion-item border-0 mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button rounded-3 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#step1" aria-expanded="true">
+                            <i class="fas fa-cloud-upload-alt me-3 text-primary"></i>
+                            {% if language == 'ar' %}
+                                الخطوة الأولى: رفع شهادة التوجيهي
+                            {% else %}
+                                Step 1: Upload Your Tawjihi Diploma
+                            {% endif %}
+                        </button>
+                    </h2>
+                    <div id="step1" class="accordion-collapse collapse show" data-bs-parent="#processAccordion">
+                        <div class="accordion-body">
+                            {% if language == 'ar' %}
+                                قم برفع نسخة من شهادة التوجيهي كصورة أو ملف PDF، وسيقوم النظام باستخراج العلامات والمعدل تلقائياً باستخدام تقنية الذكاء الاصطناعي. يمكنك أيضاً إدخال المعلومات يدوياً إذا فضلت ذلك.
+                            {% else %}
+                                Upload an image or PDF of your Tawjihi diploma, and our AI-powered system will automatically extract your grades and stream. You can also manually enter this information if you prefer.
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item border-0 mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed rounded-3 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#step2">
+                            <i class="fas fa-user me-3 text-success"></i>
+                            {% if language == 'ar' %}
+                                الخطوة الثانية: المعلومات الشخصية
+                            {% else %}
+                                Step 2: Personal Information
+                            {% endif %}
+                        </button>
+                    </h2>
+                    <div id="step2" class="accordion-collapse collapse" data-bs-parent="#processAccordion">
+                        <div class="accordion-body">
+                            {% if language == 'ar' %}
+                                أدخل بعض المعلومات الشخصية والاكاديمية والوضع الاقتصادي. هذه المعلومات تساعدنا في تقديم توصيات أكثر دقة ومراعاة للظروف الخاصة.
+                            {% else %}
+                                Provide some personal information like your location, parental education level, and economic status. This helps us provide more accurate recommendations tailored to your specific circumstances.
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item border-0 mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed rounded-3 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#step3">
+                            <i class="fas fa-brain me-3 text-warning"></i>
+                            {% if language == 'ar' %}
+                                الخطوة الثالثة: تقييم الاهتمامات
+                            {% else %}
+                                Step 3: Interest Assessment
+                            {% endif %}
+                        </button>
+                    </h2>
+                    <div id="step3" class="accordion-collapse collapse" data-bs-parent="#processAccordion">
+                        <div class="accordion-body">
+                            {% if language == 'ar' %}
+                                أجب على استبيان شامل حول اهتماماتك، أهدافك المهنية، والمواد الدراسية المفضلة. يستغرق الأمر حوالي 5 دقائق  ويساعدنا في فهم شخصيتك وميولك بشكل أفضل.
+                            {% else %}
+                                Complete a comprehensive questionnaire about your interests, career goals, and preferred subjects. It takes about 10-15 minutes and helps us understand your personality and inclinations better.
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item border-0">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed rounded-3 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#step4">
+                            <i class="fas fa-trophy me-3 text-danger"></i>
+                            {% if language == 'ar' %}
+                                الخطوة الرابعة: النتائج والتوصيات
+                            {% else %}
+                                Step 4: Results & Recommendations
+                            {% endif %}
+                        </button>
+                    </h2>
+                    <div id="step4" class="accordion-collapse collapse" data-bs-parent="#processAccordion">
+                        <div class="accordion-body">
+                            {% if language == 'ar' %}
+                                احصل على تقرير مفصل يتضمن أفضل 3 توصيات لتخصصات جامعية مناسبة لك، مع تفسير لكل توصية، احتمالية القبول، والفرص المهنية المستقبلية في السوق الفلسطيني.
+                            {% else %}
+                                Receive a detailed report with your top 3 university field recommendations, explanations for each recommendation, admission probability, and future career opportunities in the Palestinian market.
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section text-center py-5 mb-5">
+    <div class="glass-card">
+        <div class="card-body-modern py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="display-6 fw-bold mb-4">
+                        {% if language == 'ar' %}
+                            مستعد لاكتشاف مسارك الأكاديمي؟
+                        {% else %}
+                            Ready to Discover Your Academic Path?
+                        {% endif %}
+                    </h2>
+                    <p class="lead text-muted mb-5">
+                        {% if language == 'ar' %}
+                            انضم إلى آلاف الطلاب الذين وجدوا طريقهم الصحيح باستخدام مسارك
+                        {% else %}
+                            Join thousands of students who found their right path using MASARAK
+                        {% endif %}
+                    </p>
+                    
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="{{ url_for('upload_diploma') }}" class="btn btn-gradient btn-lg px-5 py-3">
+                            <i class="fas fa-rocket me-2"></i>
+                            {% if language == 'ar' %}
+                                ابدأ الآن مجاناً
+                            {% else %}
+                                Start Now For Free
+                            {% endif %}
+                        </a>
+                        <a href="{{ url_for('manual_entry') }}" class="btn btn-glass btn-lg px-5 py-3">
+                            <i class="fas fa-info-circle me-2"></i>
+                            {% if language == 'ar' %}
+                                معرفة المزيد
+                            {% else %}
+                                Learn More
+                            {% endif %}
+                        </a>
+                    </div>
+                    
+                    <div class="row mt-5">
+                        <div class="col-md-4">
+                            <div class="text-center">
+                                <div class="h2 fw-bold text-primary mb-0">10,000+</div>
+                                <div class="text-muted">
+                                    {% if language == 'ar' %}طالب استفاد{% else %}Students Helped{% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center">
+                                <div class="h2 fw-bold text-success mb-0">95%</div>
+                                <div class="text-muted">
+                                    {% if language == 'ar' %}معدل الرضا{% else %}Satisfaction Rate{% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center">
+                                <div class="h2 fw-bold text-warning mb-0">24/7</div>
+                                <div class="text-muted">
+                                    {% if language == 'ar' %}متاح دائماً{% else %}Always Available{% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .text-gradient {
+        background: var(--gradient-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    .hero-circle-bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        height: 400px;
+        background: var(--gradient-primary);
+        border-radius: 50%;
+        opacity: 0.1;
+        animation: pulse-slow 4s ease-in-out infinite;
+    }
+    
+    .hero-illustration {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 400px;
+    }
+    
+    .floating-element {
+        position: absolute;
+        z-index: 3;
+    }
+    
+    .floating-1 {
+        top: 10%;
+        left: 10%;
+        animation: float-1 6s ease-in-out infinite;
+    }
+    
+    .floating-2 {
+        top: 20%;
+        right: 15%;
+        animation: float-2 8s ease-in-out infinite;
+    }
+    
+    .floating-3 {
+        bottom: 15%;
+        left: 20%;
+        animation: float-3 7s ease-in-out infinite;
+    }
+    
+    @keyframes pulse-slow {
+        0%, 100% { transform: translate(-50%, -50%) scale(1); }
+        50% { transform: translate(-50%, -50%) scale(1.1); }
+    }
+    
+    @keyframes float-1 {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(10deg); }
+    }
+    
+    @keyframes float-2 {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-15px) rotate(-10deg); }
+    }
+    
+    @keyframes float-3 {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-25px) rotate(5deg); }
+    }
+    
+    .feature-icon-modern {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
+    
+    .icon-circle {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition-base);
+    }
+    
+    .icon-circle i {
+        font-size: 2rem;
+    }
+    
+    .card-modern:hover .icon-circle {
+        transform: scale(1.1) rotate(10deg);
+    }
+    
+    .min-vh-75 {
+        min-height: 75vh;
+    }
+    
+    @media (max-width: 768px) {
+        .hero-circle-bg {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .hero-illustration {
+            height: 300px;
+        }
+        
+        .floating-element {
+            display: none;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Add smooth reveal animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('animate-slide-up');
+                }, index * 100);
+            }
+        });
+    }, observerOptions);
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const elements = document.querySelectorAll('.card-modern, .step-modern, .accordion-item');
+        elements.forEach(el => {
+            observer.observe(el);
+        });
+    });
+</script>
+{% endblock %}

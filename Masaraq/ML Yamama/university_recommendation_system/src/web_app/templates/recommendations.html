@@ -1,0 +1,428 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {% if language == 'ar' %}
+        التوصيات | نظام توصية الجامعات الفلسطينية
+    {% else %}
+        Recommendations | Palestinian University Recommendation System
+    {% endif %}
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .recommendation-card-modern {
+        border: none;
+        border-radius: 24px;
+        overflow: hidden;
+        transition: var(--transition-base);
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+    .recommendation-card-modern .card-header {
+        background: var(--gradient-primary);
+        color: white;
+        padding: 1.5rem;
+        border-bottom: none;
+    }
+    .recommendation-card-modern .card-body {
+        padding: 1.5rem;
+    }
+    .recommendation-card-modern .match-score {
+        font-size: 3.5rem;
+        font-weight: 800;
+        background: var(--gradient-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .progress-bar-modern {
+        background: var(--gradient-primary) !important;
+        border-radius: 6px;
+    }
+    .table-modern {
+        background-color: var(--glass-bg);
+        border-radius: 16px;
+        overflow: hidden;
+    }
+    .table-modern th {
+        background-color: rgba(37, 99, 235, 0.1);
+        color: var(--primary-blue);
+        font-weight: 600;
+    }
+    .table-modern tr:hover {
+        background-color: rgba(37, 99, 235, 0.05);
+    }
+    @media print {
+        .navbar-modern, .footer-modern, .step-indicator-modern, .btn-gradient, .btn-glass, .feedback-card {
+            display: none !important;
+        }
+        .card-modern, .glass-card {
+            box-shadow: none !important;
+            border: 1px solid var(--gray-200) !important;
+            background: white !important;
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+        }
+        .main-content {
+            margin-top: 0 !important;
+        }
+    }
+
+    /* Searchable select */
+    .searchable-select-wrap {
+        display: flex;
+        align-items: center;
+        gap: .75rem;
+        flex-wrap: wrap;
+    }
+    .searchable-select-wrap .search-input {
+        min-width: 260px;
+    }
+    #majors-feedback {
+        min-width: 320px;
+        max-width: 520px;
+    }
+</style>
+{% endblock %}
+
+
+{% block content %}
+<div class="row justify-content-center animate-fade-in">
+    <div class="col-lg-12">
+        <!-- Modern Step indicator -->
+        <div class="step-indicator-modern">
+            <div class="step-modern completed"><div class="step-number-modern"><i class="fas fa-check"></i></div><div class="step-title-modern">{% if language == 'ar' %}البيانات الأكاديمية{% else %}Academic Data{% endif %}</div></div>
+            <div class="step-modern completed"><div class="step-number-modern"><i class="fas fa-check"></i></div><div class="step-title-modern">{% if language == 'ar' %}المعلومات الشخصية{% else %}Personal Info{% endif %}</div></div>
+            <div class="step-modern completed"><div class="step-number-modern"><i class="fas fa-check"></i></div><div class="step-title-modern">{% if language == 'ar' %}تقييم الاهتمامات{% else %}Interest Assessment{% endif %}</div></div>
+            <div class="step-modern active"><div class="step-number-modern">4</div><div class="step-title-modern">{% if language == 'ar' %}النتائج والتوصيات{% else %}Recommendations{% endif %}</div></div>
+        </div>
+
+        <!-- Results Header -->
+        <div class="glass-card text-center p-5 mb-5 animate-slide-up">
+            <h1 class="display-5 fw-bold mb-3">
+                <span class="text-gradient">{% if language == 'ar' %}توصياتك المخصصة{% else %}Your Personalized Recommendations{% endif %}</span>
+            </h1>
+            <p class="lead text-muted">
+                {% if language == 'ar' %}بناءً على تحليلاتنا، هذه هي أفضل 3 تخصصات جامعية تناسب ملفك الأكاديمي والشخصي.{% else %}Based on our analysis, here are the top 3 university fields that best fit your academic and personal profile.{% endif %}
+            </p>
+        </div>
+        
+        {% if recommendations.get('error') %}
+        <div class="alert alert-danger-modern animate-slide-up">
+            <h4 class="alert-heading">{% if language == 'ar' %}خطأ في النظام{% else %}System Error{% endif %}</h4>
+            <p>{{ recommendations.get('error') }}</p>
+        </div>
+        {% endif %}
+
+        <!-- Recommendations -->
+        <div class="row g-4 justify-content-center">
+            {% for rec in recommendations.get('recommendations', []) %}
+            <div class="col-lg-4 d-flex align-items-stretch animate-slide-up" style="animation-delay: {{ loop.index * 100 }}ms;">
+                <div class="card-modern recommendation-card-modern w-100">
+                    <div class="card-header text-center">
+                        <h2 class="h4 mb-0 fw-bold">
+                            {{ loop.index }}. {% if language == 'ar' %}{{ rec.get('field_name_ar', 'غير معروف') }}{% else %}{{ rec.get('field_name', 'Unknown') }}{% endif %}
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-center mb-4">
+                            <div class="match-score">{{ (rec.get('score', 0.5) * 100)|round|int }}%</div>
+                            <div class="badge bg-opacity-10 text-primary p-2 rounded-pill fw-semibold">
+                                {% if language == 'ar' %}{{ rec.get('match_strength_ar', 'متوسط') }} توافق{% else %}{{ rec.get('match_strength', 'Moderate') }} Match{% endif %}
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h6 class="fw-semibold">{% if language == 'ar' %}أسباب التوصية{% else %}Recommendation Reasons{% endif %}</h6>
+                            <ul class="list-unstyled small text-muted">
+                                {% for reason in (rec.get('reasons_ar', []) if language == 'ar' else rec.get('reasons_en', rec.get('reasons', []))) %}
+                                <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>{{ reason }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h6 class="fw-semibold">{% if language == 'ar' %}التخصصات الفرعية المحتملة{% else %}Potential Specializations{% endif %}</h6>
+                            <div class="d-flex flex-wrap gap-2">
+                                {% for subfield in (rec.get('subfields_ar', []) if language == 'ar' else rec.get('subfields', [])) %}
+                                <span class="badge bg-light text-dark border">{{ subfield }}</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <!-- University Information -->
+        {% if recommendations.get('university_options') %}
+        <div class="card-modern my-5 animate-slide-up">
+            <div class="card-header-modern"><h3 class="h4 mb-0"><i class="fas fa-university me-2"></i>{% if language == 'ar' %}الجامعات المقترحة{% else %}Suggested Universities{% endif %}</h3></div>
+            <div class="card-body-modern p-0">
+                <div class="table-responsive">
+                    <table class="table table-modern mb-0">
+                        <thead>
+                            <tr>
+                                <th>{% if language == 'ar' %}الجامعة{% else %}University{% endif %}</th>
+                                <th>{% if language == 'ar' %}الموقع{% else %}Location{% endif %}</th>
+                                <th>{% if language == 'ar' %}التخصصات المتاحة{% else %}Available Fields{% endif %}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for university in recommendations.get('university_options', []) %}
+                            <tr>
+                                <td class="fw-semibold">{% if language == 'ar' and university.get('arabic_name') %}{{ university['arabic_name'] }}{% else %}{{ university['name'] }}{% endif %}</td>
+                                <td>{{ university['location'] }}</td>
+                                <td>
+                                    {% for field in university['fields'] %}
+                                    <span class="badge bg-secondary bg-opacity-25 text-dark-emphasis fw-normal me-1">{{ field }}</span>
+                                    {% endfor %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        
+        <!-- Feedback Section -->
+        <div class="glass-card my-5 p-5 text-center feedback-card animate-slide-up">
+            <h2 class="fw-bold mb-3"><i class="fas fa-lightbulb text-warning me-2"></i>{% if language == 'ar' %}ساعدنا في تطوير توصياتنا{% else %}Help Us Improve{% endif %}</h2>
+            <p class="text-muted mb-4">
+                {% if language == 'ar' %}
+                    شاركنا التخصص الذي تراه الأنسب لك، سواء كان من توصياتنا أو غيرها. إجابتك ستساعدنا على تقديم توصيات أفضل في المستقبل.
+                {% else %}
+                    Share the major you find most suitable, whether from our recommendations or not. Your feedback helps us provide better suggestions in the future.
+                {% endif %}
+            </p>
+
+            <!-- Searchable Select (bilingual) - captures only the student's chosen major -->
+            <form id="majors-form" method="post" action="{{ url_for('submit_choice') }}" class="searchable-select-wrap justify-content-center" style="gap:.75rem;align-items:center;">
+                <input type="hidden" name="row_id" id="row_id_input" value="{{ row_id or '' }}">
+                <input type="hidden" name="lang" value="{{ language }}">
+                
+                <input id="majors-search" class="form-control-modern search-input" type="text"
+                       placeholder="{% if language == 'ar' %}ابحث عن تخصص...{% else %}Search majors...{% endif %}">
+                
+                <select id="majors-feedback" name="chosen_major" class="form-control-modern w-auto" size="6" required>
+                    <!-- Options injected by JS -->
+                </select>
+
+                <button id="majors-submit" type="submit" class="btn btn-gradient">
+                    {% if language == 'ar' %}إرسال{% else %}Submit{% endif %}
+                </button>
+            </form>
+
+            <!-- Optional: selection echo -->
+            <div id="majors-chosen" class="mt-3 small text-muted" style="display:none;"></div>
+        </div>
+
+
+        <!-- Actions -->
+        <div class="text-center my-5 animate-slide-up">
+            <a href="{{ url_for('index') }}" class="btn btn-gradient me-2 px-4 py-2">
+                <i class="fas fa-home me-2"></i>{% if language == 'ar' %}العودة إلى الرئيسية{% else %}Back to Home{% endif %}
+            </a>
+            <button class="btn btn-glass px-4 py-2" onclick="window.print()">
+                <i class="fas fa-print me-2"></i>{% if language == 'ar' %}طباعة النتائج{% else %}Print Results{% endif %}
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Inject majors + simple search logic -->
+<script>
+(function(){
+    const lang = "{{ language|e }}";
+
+    const majors_en = [
+        "Accounting",
+        "Agricultural Engineering",
+        "Applied Chemistry",
+        "Applied Computer Science",
+        "Applied Physics Technology",
+        "Arabic Language and Literature",
+        "Architectural Engineering",
+        "Biology and Biotechnology",
+        "Business Administration",
+        "Business Intelligence",
+        "Ceramic Art",
+        "Chemical Engineering",
+        "Chemistry",
+        "Civil Engineering",
+        "Computer Engineering",
+        "Computer Science",
+        "Computer Science in the Job Market",
+        "Construction Engineering",
+        "Cybersecurity",
+        "Dentistry",
+        "Digital Economy",
+        "Digital Marketing and Communication",
+        "Digital Media and Communication",
+        "Electrical Engineering",
+        "Elementary School Teacher",
+        "Energy and Environmental Engineering",
+        "English Language and Literature",
+        "Fashion Design",
+        "Financial Technology",
+        "Financial and Banking Sciences",
+        "French Language",
+        "Fundamentals of Religion",
+        "Geography",
+        "Geomatic Engineering",
+        "Graphic Design",
+        "History",
+        "Human Medicine",
+        "Industrial Engineering",
+        "Investment and Real Estate Development",
+        "Islamic Banking",
+        "Jurisprudence and Legislation",
+        "Kindergarten",
+        "Law",
+        "Management Information Systems",
+        "Mathematics",
+        "Mathematics and Data Science",
+        "Mechanical Engineering",
+        "Mechatronics Engineering",
+        "Molecular Diagnostics Technology",
+        "Music",
+        "Network Engineering",
+        "Nursing",
+        "Nutrition and Food Processing",
+        "Physical Education",
+        "Physics",
+        "Planning Engineering",
+        "Political Science",
+        "Psychology – Psychological Counseling",
+        "Public Relations",
+        "Radio and Television",
+        "Social Work",
+        "Therapeutic Expressive Art",
+        "Tourism and Archaeology",
+        "Veterinary Medicine"
+    ];
+
+    const majors_ar = [
+        "المحاسبة",
+        "الهندسة الزراعية",
+        "الكيمياء التطبيقية",
+        "علم الحاسوب التطبيقي",
+        "تقنية الفيزياء التطبيقية",
+        "اللغة العربية وآدابها",
+        "الهندسة المعمارية",
+        "الأحياء والتقنيات الحيوية",
+        "إدارة الأعمال",
+        "ذكاء الأعمال",
+        "الفن الخزفي",
+        "الهندسة الكيميائية",
+        "الكيمياء",
+        "الهندسة المدنية",
+        "هندسة الحاسوب",
+        "علم الحاسوب",
+        "علم الحاسوب في سوق العمل",
+        "هندسة الإنشاءات",
+        "الأمن السيبراني",
+        "طب الأسنان",
+        "الاقتصاد الرقمي",
+        "التسويق والاتصال الرقمي",
+        "الإعلام الرقمي والاتصال",
+        "الهندسة الكهربائية",
+        "معلم المرحلة الأساسية",
+        "هندسة الطاقة والبيئة",
+        "اللغة الإنجليزية وآدابها",
+        "تصميم الأزياء",
+        "التكنولوجيا المالية",
+        "العلوم المالية والمصرفية",
+        "اللغة الفرنسية",
+        "أصول الدين",
+        "الجغرافيا",
+        "الهندسة الجيوماتيكية",
+        "التصميم الجرافيكي",
+        "التاريخ",
+        "الطب البشري",
+        "الهندسة الصناعية",
+        "الاستثمار والتطوير العقاري",
+        "المصارف الإسلامية",
+        "الفقه والتشريع",
+        "رياض الأطفال",
+        "القانون",
+        "نظم المعلومات الإدارية",
+        "الرياضيات",
+        "الرياضيات وعلوم البيانات",
+        "الهندسة الميكانيكية",
+        "هندسة الميكاترونكس",
+        "تقنيات التشخيص الجزيئي",
+        "الموسيقى",
+        "هندسة الشبكات",
+        "التمريض",
+        "التغذية وتصنيع الأغذية",
+        "التربية الرياضية",
+        "الفيزياء",
+        "هندسة التخطيط",
+        "العلوم السياسية",
+        "علم النفس – الإرشاد النفسي",
+        "العلاقات العامة",
+        "الإذاعة والتلفزيون",
+        "الخدمة الاجتماعية",
+        "العلاج التعبيري بالفن",
+        "السياحة والآثار",
+        "الطب البيطري"
+    ];
+
+    const byLang = (lang === 'ar') ? majors_ar : majors_en;
+
+    const selectEl = document.getElementById('majors-feedback');
+    const searchEl = document.getElementById('majors-search');
+    const submitEl = document.getElementById('majors-submit');
+    const chosenEl = document.getElementById('majors-chosen');
+
+    function populate(options) {
+        selectEl.innerHTML = '';
+        const ph = document.createElement('option');
+        ph.disabled = true;
+        ph.hidden = true;
+        ph.textContent = (lang === 'ar') ? 'اختر التخصص...' : 'Choose a major...';
+        selectEl.appendChild(ph);
+
+        options.forEach(v => {
+            const opt = document.createElement('option');
+            opt.value = v;
+            opt.textContent = v;
+            selectEl.appendChild(opt);
+        });
+
+        selectEl.selectedIndex = 0;
+    }
+
+    function filterOptions(q) {
+        const norm = (s) => s.toString().toLowerCase().trim();
+        const needle = norm(q);
+        if (!needle) return byLang.slice();
+        return byLang.filter(v => norm(v).includes(needle));
+    }
+
+    populate(byLang);
+
+    searchEl.addEventListener('input', () => {
+        const results = filterOptions(searchEl.value);
+        populate(results);
+    });
+
+    submitEl.addEventListener('click', () => {
+        const sel = selectEl.value || '';
+        if (!sel || selectEl.selectedIndex <= 0) {
+            alert(lang === 'ar' ? 'يرجى اختيار تخصص.' : 'Please choose a major.');
+            return;
+        }
+        chosenEl.style.display = 'block';
+        chosenEl.textContent = (lang === 'ar')
+            ? `تم اختيار التخصص: ${sel}`
+            : `Selected major: ${sel}`;
+    });
+})();
+</script>
+{% endblock %}

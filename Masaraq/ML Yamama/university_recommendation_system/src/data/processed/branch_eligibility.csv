@@ -1,0 +1,385 @@
+branch,program_name,is_eligible
+Scientific,Biology and Biotechnology,True
+Scientific,Mathematics,True
+Scientific,Mathematics and Data Science,True
+Scientific,Physics,True
+Scientific,Applied Physics Technology,True
+Scientific,Chemistry,True
+Scientific,Applied Chemistry,True
+Scientific,Molecular Diagnostics Technology,True
+Scientific,Arabic Language and Literature,True
+Scientific,English Language and Literature,True
+Scientific,French Language,True
+Scientific,History,True
+Scientific,Geography,True
+Scientific,Tourism and Archaeology,True
+Scientific,Psychology – Psychological Counseling,True
+Scientific,Social Work,True
+Scientific,Physical Education,True
+Scientific,Kindergarten,True
+Scientific,Elementary School Teacher,True
+Scientific,Jurisprudence and Legislation,True
+Scientific,Fundamentals of Religion,True
+Scientific,Islamic Banking,True
+Scientific,Civil Engineering,True
+Scientific,Geomatic Engineering,True
+Scientific,Architectural Engineering,True
+Scientific,Construction Engineering,True
+Scientific,Planning Engineering,True
+Scientific,Mechanical Engineering,True
+Scientific,Chemical Engineering,True
+Scientific,Industrial Engineering,True
+Scientific,Computer Engineering,True
+Scientific,Electrical Engineering,True
+Scientific,Mechatronics Engineering,True
+Scientific,Energy and Environmental Engineering,True
+Scientific,Network Engineering,True
+Scientific,Computer Science,True
+Scientific,Computer Science in the Job Market,True
+Scientific,Management Information Systems,True
+Scientific,Cybersecurity,True
+Scientific,Human Medicine,True
+Scientific,Dentistry,True
+Scientific,Pharmacy,True
+Scientific,Optometry,True
+Scientific,Medical Laboratory Sciences,True
+Scientific,Medical Imaging,True
+Scientific,Audiology and Speech Sciences,True
+Scientific,Physical Therapy,True
+Scientific,Cardiopulmonary Perfusion Technology,True
+Scientific,Anesthesia and Resuscitation,True
+Scientific,Nursing,True
+Scientific,Midwifery,True
+Scientific,Digital Economy,True
+Scientific,Digital Media and Communication,True
+Scientific,Radio and Television,True
+Scientific,Public Relations,True
+Scientific,Accounting,True
+Scientific,Business Administration,True
+Scientific,Financial and Banking Sciences,True
+Scientific,Financial Technology,True
+Scientific,Digital Marketing and Communication,True
+Scientific,Investment and Real Estate Development,True
+Scientific,Business Intelligence,True
+Scientific,Veterinary Medicine,True
+Scientific,Nutrition and Food Processing,True
+Scientific,Agricultural Engineering,True
+Scientific,Law,True
+Scientific,Political Science,True
+Scientific,Music,True
+Scientific,Interior Design,True
+Scientific,Painting and Drawing,True
+Scientific,Graphic Design,True
+Scientific,Ceramic Art,True
+Scientific,Game Design,True
+Scientific,Fashion Design,True
+Scientific,Therapeutic Expressive Art,True
+Literary,Management Information Systems,True
+Literary,Digital Economy,True
+Literary,Digital Media and Communication,True
+Literary,Radio and Television,True
+Literary,Public Relations,True
+Literary,Accounting,True
+Literary,Business Administration,True
+Literary,Financial and Banking Sciences,True
+Literary,Financial Technology,True
+Literary,Digital Marketing and Communication,True
+Literary,Investment and Real Estate Development,True
+Literary,Business Intelligence,True
+Literary,Arabic Language and Literature,True
+Literary,English Language and Literature,True
+Literary,French Language,True
+Literary,History,True
+Literary,Geography,True
+Literary,Tourism and Archaeology,True
+Literary,Psychology – Psychological Counseling,True
+Literary,Social Work,True
+Literary,Physical Education,True
+Literary,Kindergarten,True
+Literary,Elementary School Teacher,True
+Literary,Music,True
+Literary,Interior Design,True
+Literary,Painting and Drawing,True
+Literary,Graphic Design,True
+Literary,Ceramic Art,True
+Literary,Game Design,True
+Literary,Fashion Design,True
+Literary,Therapeutic Expressive Art,True
+Literary,Jurisprudence and Legislation,True
+Literary,Fundamentals of Religion,True
+Literary,Islamic Banking,True
+Literary,Law,True
+Sharia,Management Information Systems,True
+Sharia,Digital Economy,True
+Sharia,Digital Media and Communication,True
+Sharia,Radio and Television,True
+Sharia,Public Relations,True
+Sharia,Accounting,True
+Sharia,Business Administration,True
+Sharia,Financial and Banking Sciences,True
+Sharia,Financial Technology,True
+Sharia,Digital Marketing and Communication,True
+Sharia,Investment and Real Estate Development,True
+Sharia,Business Intelligence,True
+Sharia,Arabic Language and Literature,True
+Sharia,English Language and Literature,True
+Sharia,French Language,True
+Sharia,History,True
+Sharia,Geography,True
+Sharia,Tourism and Archaeology,True
+Sharia,Psychology – Psychological Counseling,True
+Sharia,Social Work,True
+Sharia,Physical Education,True
+Sharia,Kindergarten,True
+Sharia,Elementary School Teacher,True
+Sharia,Music,True
+Sharia,Interior Design,True
+Sharia,Painting and Drawing,True
+Sharia,Graphic Design,True
+Sharia,Ceramic Art,True
+Sharia,Game Design,True
+Sharia,Fashion Design,True
+Sharia,Therapeutic Expressive Art,True
+Sharia,Jurisprudence and Legislation,True
+Sharia,Fundamentals of Religion,True
+Sharia,Islamic Banking,True
+Sharia,Law,True
+Agricultural,Biology and Biotechnology,True
+Agricultural,Mathematics,True
+Agricultural,Mathematics and Data Science,True
+Agricultural,Physics,True
+Agricultural,Applied Physics Technology,True
+Agricultural,Chemistry,True
+Agricultural,Applied Chemistry,True
+Agricultural,Molecular Diagnostics Technology,True
+Agricultural,Arabic Language and Literature,True
+Agricultural,English Language and Literature,True
+Agricultural,French Language,True
+Agricultural,History,True
+Agricultural,Geography,True
+Agricultural,Tourism and Archaeology,True
+Agricultural,Psychology – Psychological Counseling,True
+Agricultural,Social Work,True
+Agricultural,Physical Education,True
+Agricultural,Kindergarten,True
+Agricultural,Elementary School Teacher,True
+Agricultural,Jurisprudence and Legislation,True
+Agricultural,Fundamentals of Religion,True
+Agricultural,Islamic Banking,True
+Agricultural,Computer Science,True
+Agricultural,Computer Science in the Job Market,True
+Agricultural,Management Information Systems,True
+Agricultural,Cybersecurity,True
+Agricultural,Digital Economy,True
+Agricultural,Digital Media and Communication,True
+Agricultural,Radio and Television,True
+Agricultural,Public Relations,True
+Agricultural,Accounting,True
+Agricultural,Business Administration,True
+Agricultural,Financial and Banking Sciences,True
+Agricultural,Financial Technology,True
+Agricultural,Digital Marketing and Communication,True
+Agricultural,Investment and Real Estate Development,True
+Agricultural,Business Intelligence,True
+Agricultural,Veterinary Medicine,True
+Agricultural,Nutrition and Food Processing,True
+Agricultural,Political Science,True
+Agricultural,Music,True
+Agricultural,Interior Design,True
+Agricultural,Painting and Drawing,True
+Agricultural,Graphic Design,True
+Agricultural,Ceramic Art,True
+Agricultural,Game Design,True
+Agricultural,Fashion Design,True
+Agricultural,Therapeutic Expressive Art,True
+Industrial,Biology and Biotechnology,True
+Industrial,Mathematics,True
+Industrial,Mathematics and Data Science,True
+Industrial,Physics,True
+Industrial,Applied Physics Technology,True
+Industrial,Chemistry,True
+Industrial,Applied Chemistry,True
+Industrial,Molecular Diagnostics Technology,True
+Industrial,Arabic Language and Literature,True
+Industrial,English Language and Literature,True
+Industrial,French Language,True
+Industrial,History,True
+Industrial,Geography,True
+Industrial,Tourism and Archaeology,True
+Industrial,Psychology – Psychological Counseling,True
+Industrial,Social Work,True
+Industrial,Physical Education,True
+Industrial,Kindergarten,True
+Industrial,Elementary School Teacher,True
+Industrial,Jurisprudence and Legislation,True
+Industrial,Fundamentals of Religion,True
+Industrial,Islamic Banking,True
+Industrial,Civil Engineering,True
+Industrial,Geomatic Engineering,True
+Industrial,Architectural Engineering,True
+Industrial,Construction Engineering,True
+Industrial,Planning Engineering,True
+Industrial,Mechanical Engineering,True
+Industrial,Chemical Engineering,True
+Industrial,Industrial Engineering,True
+Industrial,Computer Engineering,True
+Industrial,Electrical Engineering,True
+Industrial,Mechatronics Engineering,True
+Industrial,Energy and Environmental Engineering,True
+Industrial,Network Engineering,True
+Industrial,Computer Science,True
+Industrial,Computer Science in the Job Market,True
+Industrial,Management Information Systems,True
+Industrial,Cybersecurity,True
+Industrial,Digital Economy,True
+Industrial,Digital Media and Communication,True
+Industrial,Radio and Television,True
+Industrial,Public Relations,True
+Industrial,Accounting,True
+Industrial,Business Administration,True
+Industrial,Financial and Banking Sciences,True
+Industrial,Financial Technology,True
+Industrial,Digital Marketing and Communication,True
+Industrial,Investment and Real Estate Development,True
+Industrial,Business Intelligence,True
+Industrial,Nutrition and Food Processing,True
+Industrial,Agricultural Engineering,True
+Industrial,Political Science,True
+Industrial,Music,True
+Industrial,Interior Design,True
+Industrial,Painting and Drawing,True
+Industrial,Graphic Design,True
+Industrial,Ceramic Art,True
+Industrial,Game Design,True
+Industrial,Fashion Design,True
+Industrial,Therapeutic Expressive Art,True
+Hotel and Home Economics,Management Information Systems,True
+Hotel and Home Economics,Digital Economy,True
+Hotel and Home Economics,Digital Media and Communication,True
+Hotel and Home Economics,Radio and Television,True
+Hotel and Home Economics,Public Relations,True
+Hotel and Home Economics,Accounting,True
+Hotel and Home Economics,Business Administration,True
+Hotel and Home Economics,Financial and Banking Sciences,True
+Hotel and Home Economics,Financial Technology,True
+Hotel and Home Economics,Digital Marketing and Communication,True
+Hotel and Home Economics,Investment and Real Estate Development,True
+Hotel and Home Economics,Business Intelligence,True
+Hotel and Home Economics,Arabic Language and Literature,True
+Hotel and Home Economics,English Language and Literature,True
+Hotel and Home Economics,French Language,True
+Hotel and Home Economics,History,True
+Hotel and Home Economics,Geography,True
+Hotel and Home Economics,Tourism and Archaeology,True
+Hotel and Home Economics,Psychology – Psychological Counseling,True
+Hotel and Home Economics,Social Work,True
+Hotel and Home Economics,Physical Education,True
+Hotel and Home Economics,Kindergarten,True
+Hotel and Home Economics,Elementary School Teacher,True
+Hotel and Home Economics,Music,True
+Hotel and Home Economics,Interior Design,True
+Hotel and Home Economics,Painting and Drawing,True
+Hotel and Home Economics,Graphic Design,True
+Hotel and Home Economics,Ceramic Art,True
+Hotel and Home Economics,Game Design,True
+Hotel and Home Economics,Fashion Design,True
+Hotel and Home Economics,Therapeutic Expressive Art,True
+Hotel and Home Economics,Jurisprudence and Legislation,True
+Hotel and Home Economics,Fundamentals of Religion,True
+Hotel and Home Economics,Islamic Banking,True
+Information Technology,Biology and Biotechnology,True
+Information Technology,Mathematics,True
+Information Technology,Mathematics and Data Science,True
+Information Technology,Physics,True
+Information Technology,Applied Physics Technology,True
+Information Technology,Chemistry,True
+Information Technology,Applied Chemistry,True
+Information Technology,Molecular Diagnostics Technology,True
+Information Technology,Arabic Language and Literature,True
+Information Technology,English Language and Literature,True
+Information Technology,French Language,True
+Information Technology,History,True
+Information Technology,Geography,True
+Information Technology,Tourism and Archaeology,True
+Information Technology,Psychology – Psychological Counseling,True
+Information Technology,Social Work,True
+Information Technology,Physical Education,True
+Information Technology,Kindergarten,True
+Information Technology,Elementary School Teacher,True
+Information Technology,Jurisprudence and Legislation,True
+Information Technology,Fundamentals of Religion,True
+Information Technology,Islamic Banking,True
+Information Technology,Civil Engineering,True
+Information Technology,Geomatic Engineering,True
+Information Technology,Architectural Engineering,True
+Information Technology,Construction Engineering,True
+Information Technology,Planning Engineering,True
+Information Technology,Mechanical Engineering,True
+Information Technology,Chemical Engineering,True
+Information Technology,Industrial Engineering,True
+Information Technology,Computer Engineering,True
+Information Technology,Electrical Engineering,True
+Information Technology,Mechatronics Engineering,True
+Information Technology,Energy and Environmental Engineering,True
+Information Technology,Network Engineering,True
+Information Technology,Computer Science,True
+Information Technology,Computer Science in the Job Market,True
+Information Technology,Management Information Systems,True
+Information Technology,Cybersecurity,True
+Information Technology,Digital Economy,True
+Information Technology,Digital Media and Communication,True
+Information Technology,Radio and Television,True
+Information Technology,Public Relations,True
+Information Technology,Accounting,True
+Information Technology,Business Administration,True
+Information Technology,Financial and Banking Sciences,True
+Information Technology,Financial Technology,True
+Information Technology,Digital Marketing and Communication,True
+Information Technology,Investment and Real Estate Development,True
+Information Technology,Business Intelligence,True
+Information Technology,Veterinary Medicine,True
+Information Technology,Nutrition and Food Processing,True
+Information Technology,Agricultural Engineering,True
+Information Technology,Political Science,True
+Information Technology,Music,True
+Information Technology,Interior Design,True
+Information Technology,Painting and Drawing,True
+Information Technology,Graphic Design,True
+Information Technology,Ceramic Art,True
+Information Technology,Game Design,True
+Information Technology,Fashion Design,True
+Information Technology,Therapeutic Expressive Art,True
+Entrepreneurship and Business,Management Information Systems,True
+Entrepreneurship and Business,Digital Economy,True
+Entrepreneurship and Business,Digital Media and Communication,True
+Entrepreneurship and Business,Radio and Television,True
+Entrepreneurship and Business,Public Relations,True
+Entrepreneurship and Business,Accounting,True
+Entrepreneurship and Business,Business Administration,True
+Entrepreneurship and Business,Financial and Banking Sciences,True
+Entrepreneurship and Business,Financial Technology,True
+Entrepreneurship and Business,Digital Marketing and Communication,True
+Entrepreneurship and Business,Investment and Real Estate Development,True
+Entrepreneurship and Business,Business Intelligence,True
+Entrepreneurship and Business,Arabic Language and Literature,True
+Entrepreneurship and Business,English Language and Literature,True
+Entrepreneurship and Business,French Language,True
+Entrepreneurship and Business,History,True
+Entrepreneurship and Business,Geography,True
+Entrepreneurship and Business,Tourism and Archaeology,True
+Entrepreneurship and Business,Psychology – Psychological Counseling,True
+Entrepreneurship and Business,Social Work,True
+Entrepreneurship and Business,Physical Education,True
+Entrepreneurship and Business,Kindergarten,True
+Entrepreneurship and Business,Elementary School Teacher,True
+Entrepreneurship and Business,Music,True
+Entrepreneurship and Business,Interior Design,True
+Entrepreneurship and Business,Painting and Drawing,True
+Entrepreneurship and Business,Graphic Design,True
+Entrepreneurship and Business,Ceramic Art,True
+Entrepreneurship and Business,Game Design,True
+Entrepreneurship and Business,Fashion Design,True
+Entrepreneurship and Business,Therapeutic Expressive Art,True
+Entrepreneurship and Business,Jurisprudence and Legislation,True
+Entrepreneurship and Business,Fundamentals of Religion,True
+Entrepreneurship and Business,Islamic Banking,True

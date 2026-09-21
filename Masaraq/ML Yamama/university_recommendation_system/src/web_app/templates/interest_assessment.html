@@ -1,0 +1,271 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {% if language == 'ar' %}
+        تقييم الاهتمامات | نظام توصية الجامعات الفلسطينية
+    {% else %}
+        Interest Assessment | Palestinian University Recommendation System
+    {% endif %}
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .question-options .form-check{flex-grow:1;text-align:center}
+    .question-options .form-check-label{display:block;padding:.75rem .5rem;border:2px solid var(--gray-200);border-radius:12px;cursor:pointer;transition:var(--transition-fast);font-weight:500}
+    .question-options .form-check-input:checked + .form-check-label{background-color:var(--primary-blue);border-color:var(--primary-blue);color:#fff;transform:translateY(-2px);box-shadow:var(--shadow-md)}
+    .question-options .form-check-input{display:none}
+    .question-options .form-check-label:hover{background-color:var(--gray-100);border-color:var(--primary-blue)}
+    .category-btn.active{background:var(--gradient-primary);color:#fff!important;transform:translateY(-2px);box-shadow:var(--shadow-md)}
+    .question-section{display:none}
+    .question-section.active{display:block}
+    .timed-question .image-container{position:relative;text-align:center}
+    .timed-question .image-container img{max-width:100%;max-height:400px;height:auto;border-radius:12px;margin-bottom:1rem}
+    .timed-question .timer-display{position:absolute;top:15px;right:15px;background:rgba(0,0,0,.7);color:#fff;padding:5px 15px;border-radius:20px;font-size:1.2rem;font-weight:bold}
+    .timed-question .question-content{display:none}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center animate-fade-in">
+  <div class="col-lg-10">
+    <div class="step-indicator-modern">
+      <div class="step-modern completed"><div class="step-number-modern"><i class="fas fa-check"></i></div><div class="step-title-modern">{% if language == 'ar' %}المعلومات الأكاديمية والشخصية{% else %}Academic & Personal Data{% endif %}</div></div>
+      <div class="step-modern active"><div class="step-number-modern">2</div><div class="step-title-modern">{% if language == 'ar' %}تقييم الاهتمامات{% else %}Interest Assessment{% endif %}</div></div>
+      <div class="step-modern"><div class="step-number-modern">3</div><div class="step-title-modern">{% if language == 'ar' %}النتائج والتوصيات{% else %}Recommendations{% endif %}</div></div>
+    </div>
+
+    <div class="card-modern animate-slide-up">
+      <div class="card-header-modern text-center">
+        <h2 class="h3 mb-0"><i class="fas fa-brain me-2"></i>{% if language == 'ar' %}تقييم الاهتمامات{% else %}Interest Assessment{% endif %}</h2>
+      </div>
+      <div class="card-body-modern">
+        <div class="alert alert-info-modern">
+          <i class="fas fa-info-circle me-2"></i>
+          {% if language == 'ar' %}أجب على أسئلة كل قسم، ثم انتقل إلى القسم التالي.{% else %}Answer the questions in each section, then proceed to the next.{% endif %}
+        </div>
+
+        <form method="POST" id="interestForm" class="mt-4">
+          <!-- تنقل الأقسام -->
+          <div class="mb-4 text-center">
+            <div class="btn-group w-100" role="group" aria-label="Question categories">
+              {% set categories = questionnaire | map(attribute='category') | unique | list %}
+              {% for category in categories %}
+              <button type="button" class="btn btn-glass category-btn" data-category="{{ category }}">
+                <span class="d-none d-md-inline">{{ loop.index }}. </span>
+                {% if category == 'personality' %}{% if language == 'ar' %}العوامل الاجتماعية{% else %}Social Factors{% endif %}{% endif %}
+                {% if category == 'subjects' %}{% if language == 'ar' %}الشخصية{% else %}Personality{% endif %}{% endif %}
+                {% if category == 'career_goals' %}{% if language == 'ar' %}المهارات والتفضيلات{% else %}Skills & Preferences{% endif %}{% endif %}
+                {% if category == 'activities' %}{% if language == 'ar' %}الأنشطة{% else %}Activities{% endif %}{% endif %}
+              </button>
+              {% endfor %}
+            </div>
+          </div>
+
+          <div id="questions-container">
+            {% for category in categories %}
+            <div class="question-section" data-section-id="{{ category }}">
+              {% for question in questionnaire if question.category == category %}
+              <div class="glass-card mb-4 question-card" data-category="{{ question.category }}">
+                <div class="card-body">
+                  <p class="lead text-center fw-semibold mb-4"><strong>{{ loop.index }}.</strong> {{ question.question }}</p>
+                  <div class="d-flex justify-content-center gap-2 gap-md-3 question-options">
+                    {% for option in question.options %}
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="{{ question.id }}" id="{{ question.id }}_{{ loop.index }}" value="{{ option.value }}" required>
+                      <label class="form-check-label" for="{{ question.id }}_{{ loop.index }}">{{ option.label }}</label>
+                    </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+
+              {% if category == 'career_goals' %}
+              <!-- q30 -->
+              <div class="glass-card mb-4 question-card timed-question" data-question-id="q30" style="display:none;">
+                <div class="card-body">
+                  <div class="image-container">
+                    <p class="lead fw-semibold">{% if language == 'ar' %}انظر إلى الصورة جيداً. ستختفي بعد 8 ثانية.{% else %}Look at the image carefully. It will disappear after 8 seconds.{% endif %}</p>
+                    <img src="{{ url_for('static', filename='images/disk.jpg') }}" alt="Desk with colorful shelves">
+                    <div class="timer-display">20</div>
+                  </div>
+                  <div class="question-content">
+                    <p class="lead text-center fw-semibold mb-4">{% if language == 'ar' %}ماذا كان لون الكوب؟{% else %}What was the color of the cup?{% endif %}</p>
+                    <div class="d-flex justify-content-center gap-2 gap-md-3 question-options">
+                      <div class="form-check"><input class="form-check-input" type="radio" name="q30" id="q30_yellow" value="أصفر" required><label class="form-check-label" for="q30_yellow">{% if language == 'ar' %}أصفر{% else %}Yellow{% endif %}</label></div>
+                      <div class="form-check"><input class="form-check-input" type="radio" name="q30" id="q30_green" value="أخضر"><label class="form-check-label" for="q30_green">{% if language == 'ar' %}أخضر{% else %}Green{% endif %}</label></div>
+                      <div class="form-check"><input class="form-check-input" type="radio" name="q30" id="q30_pink" value="زهري"><label class="form-check-label" for="q30_pink">{% if language == 'ar' %}زهري{% else %}Pink{% endif %}</label></div>
+                      <div class="form-check"><input class="form-check-input" type="radio" name="q30" id="q30_na" value="لا أتذكر"><label class="form-check-label" for="q30_na">{% if language == 'ar' %}لا أتذكر{% else %}I don't remember{% endif %}</label></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- q31 -->
+              <div class="glass-card mb-4 question-card timed-question" data-question-id="q31" style="display:none;">
+                <div class="card-body">
+                  <div class="image-container">
+                    <p class="lead fw-semibold">{% if language == 'ar' %}انظر إلى الصورة جيداً. ستختفي بعد 8 ثانية.{% else %}Look at the image carefully. It will disappear after 8 seconds.{% endif %}</p>
+                    <img src="{{ url_for('static', filename='images/image2.jpg') }}" alt="Arabic color names">
+                    <div class="timer-display">20</div>
+                  </div>
+                  <div class="question-content">
+                    <p class="lead text-center fw-semibold mb-4">{% if language == 'ar' %}ما هو اللون الذي لونت به كلمة "بني"؟{% else %}What was the color of the word "Brown"?{% endif %}</p>
+                    <div class="d-flex justify-content-center gap-2 gap-md-3 question-options">
+                      <div class="form-check"><input class="form-check-input" type="radio" name="q31" id="q31_pink" value="زهري" required><label class="form-check-label" for="q31_pink">{% if language == 'ar' %}زهري{% else %}Pink{% endif %}</label></div>
+                      <div class="form-check"><input class="form-check-input" type="radio" name="q31" id="q31_green" value="أخضر"><label class="form-check-label" for="q31_green">{% if language == 'ar' %}أخضر{% else %}Green{% endif %}</label></div>
+                      <div class="form-check"><input class="form-check-input" type="radio" name="q31" id="q31_yellow" value="أصفر"><label class="form-check-label" for="q31_yellow">{% if language == 'ar' %}أصفر{% else %}Yellow{% endif %}</label></div>
+                      <div class="form-check"><input class="form-check-input" type="radio" name="q31" id="q31_na" value="لا أتذكر"><label class="form-check-label" for="q31_na">{% if language == 'ar' %}لا أتذكر{% else %}I don't remember{% endif %}</label></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+
+              <div class="d-flex justify-content-between mt-4">
+                {% if not loop.first %}
+                  <button type="button" class="btn btn-glass prev-btn"><i class="fas fa-arrow-left me-2"></i>{% if language == 'ar' %}السابق{% else %}Previous{% endif %}</button>
+                {% else %}<span></span>{% endif %}
+
+                {% if not loop.last %}
+                  <button type="button" class="btn btn-gradient next-btn">{% if language == 'ar' %}التالي{% else %}Next{% endif %}<i class="fas fa-arrow-right ms-2"></i></button>
+                {% endif %}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+
+          <div class="mt-5">
+            <div class="d-flex justify-content-between mb-2 text-muted fw-semibold">
+              <span>{% if language == 'ar' %}الاكتمال الكلي{% else %}Overall Completion{% endif %}</span>
+              <span><span id="answered-count">0</span> / <span id="total-questions">{{ questionnaire|length + 2 }}</span></span>
+            </div>
+            <div class="progress" style="height:12px;border-radius:6px;">
+              <div class="progress-bar" role="progressbar" style="width:0%;background:var(--gradient-primary);" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="progress-bar"></div>
+            </div>
+          </div>
+
+          <div class="text-center mt-5" id="submit-container" style="display:none;">
+            <button type="submit" class="btn btn-gradient px-5 py-3" id="submitBtn">
+              <i class="fas fa-poll-h me-2"></i>{% if language == 'ar' %}عرض النتائج والتوصيات{% else %}View Results & Recommendations{% endif %}
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('interestForm');
+  if (!form) return;
+
+  const progressBar = document.getElementById('progress-bar');
+  const answeredCountEl = document.getElementById('answered-count');
+  const submitContainer = document.getElementById('submit-container');
+  const categoryBtns = document.querySelectorAll('.category-btn');
+  const sections = document.querySelectorAll('.question-section');
+  const nextBtns = document.querySelectorAll('.next-btn');
+  const prevBtns = document.querySelectorAll('.prev-btn');
+
+  let currentSectionIndex = 0;
+  const totalQuestionCount = form.querySelectorAll('.question-card').length;
+  const timedQuestionStates = {};
+
+  function startTimerForQuestion(questionCard) {
+    const questionId = questionCard.dataset.questionId;
+    if (timedQuestionStates[questionId]) return;
+    timedQuestionStates[questionId] = true;
+    const imageContainer = questionCard.querySelector('.image-container');
+    const questionContent = questionCard.querySelector('.question-content');
+    const timerDisplay = questionCard.querySelector('.timer-display');
+    let timeLeft = 8;
+    timerDisplay.textContent = timeLeft;
+    const countdownInterval = setInterval(() => {
+      timeLeft--;
+      timerDisplay.textContent = timeLeft;
+      if (timeLeft <= 0) clearInterval(countdownInterval);
+    }, 1000);
+    setTimeout(() => {
+      imageContainer.style.display = 'none';
+      questionContent.style.display = 'block';
+    }, 8000);
+  }
+
+  function showSection(index) {
+    sections.forEach((section, i) => section.classList.toggle('active', i === index));
+    categoryBtns.forEach((btn, i) => btn.classList.toggle('active', i === index));
+    currentSectionIndex = index;
+    updateProgress();
+  }
+
+  function updateProgress() {
+    const answered = form.querySelectorAll('input[type="radio"]:checked').length;
+    const percent = totalQuestionCount > 0 ? Math.round((answered / totalQuestionCount) * 100) : 0;
+    progressBar.style.width = percent + '%';
+    progressBar.setAttribute('aria-valuenow', percent);
+    answeredCountEl.textContent = answered;
+    submitContainer.style.display = (answered === totalQuestionCount) ? 'block' : 'none';
+  }
+
+  function isSectionComplete(section) {
+    const questionsInSection = section.querySelectorAll('.question-card');
+    const answeredInSection = section.querySelectorAll('input[type="radio"]:checked');
+    return questionsInSection.length === answeredInSection.length;
+  }
+
+  nextBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const currentSection = sections[currentSectionIndex];
+      if (isSectionComplete(currentSection)) {
+        if (currentSectionIndex < sections.length - 1) {
+          showSection(currentSectionIndex + 1);
+        }
+      } else {
+        alert("{% if language == 'ar' %}يرجى الإجابة على جميع الأسئلة في هذا القسم للمتابعة.{% else %}Please answer all questions in this section to continue.{% endif %}");
+      }
+    });
+  });
+
+  prevBtns.forEach(btn => btn.addEventListener('click', () => {
+    if (currentSectionIndex > 0) showSection(currentSectionIndex - 1);
+  }));
+
+  categoryBtns.forEach((btn, index) => btn.addEventListener('click', () => showSection(index)));
+
+  // timed logic داخل قسم career_goals
+  const skillsSection = document.querySelector('.question-section[data-section-id="career_goals"]');
+  if (skillsSection) {
+    const regularQuestions = skillsSection.querySelectorAll('.question-card:not(.timed-question)');
+    const timedQuestion1 = skillsSection.querySelector('[data-question-id="q30"]');
+    const timedQuestion2 = skillsSection.querySelector('[data-question-id="q31"]');
+
+    if (regularQuestions.length > 0 && timedQuestion1) {
+      const lastRegular = regularQuestions[regularQuestions.length - 1];
+      lastRegular.querySelectorAll('input[type="radio"]').forEach(radio => {
+        radio.addEventListener('change', () => {
+          timedQuestion1.style.display = 'block';
+          startTimerForQuestion(timedQuestion1);
+        }, { once: true });
+      });
+    }
+
+    if (timedQuestion1 && timedQuestion2) {
+      const timedQ1Radios = timedQuestion1.querySelectorAll('input[name="q30"]');
+      timedQ1Radios.forEach(radio => {
+        radio.addEventListener('change', () => {
+          timedQuestion2.style.display = 'block';
+          startTimerForQuestion(timedQuestion2);
+        }, { once: true });
+      });
+    }
+  }
+
+  form.addEventListener('change', updateProgress);
+  showSection(0);
+});
+</script>
+{% endblock %}

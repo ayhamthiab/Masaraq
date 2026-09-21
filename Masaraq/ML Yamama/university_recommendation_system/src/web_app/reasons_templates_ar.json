@@ -1,0 +1,8 @@
+{
+  "gpa_strong": "معدلك ({gpa}%) أعلى بكثير من المطلوب، وهذا يثبت جاهزيتك الأكاديمية.",
+  "gpa_borderline": "معدلك ({gpa}%) قريب من الحد المطلوب — بقليل من الجهد ستتفوق هنا.",
+  "interest_high": "هذا التخصص يتوافق مع شغفك في {interest_area} — تخيل أنك تدرس ما تحبه كل يوم!",
+  "weakness_compensation": "رغم أن نتيجتك في {weak_subject} أقل قليلاً، إلا أن قوتك في {strong_subject} تجعل منك مرشحاً مميزاً.",
+  "career_opportunities": "هذا التخصص يفتح لك مجالات عمل في {career_paths}. سوق العمل الحالي: بطالة {unemployment}%، ومتوسط الراتب {salary} شيكل.",
+  "final_encouragement": "نثق أنك ستتألق في هذا المسار!"
+}

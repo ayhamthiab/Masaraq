@@ -1,0 +1,241 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {% if language == 'ar' %}
+        رفع شهادة التوجيهي | نظام توصية الجامعات الفلسطينية
+    {% else %}
+        Upload Diploma | Palestinian University Recommendation System
+    {% endif %}
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .upload-area {
+        border: 2px dashed var(--gray-300);
+        border-radius: 20px;
+        padding: 4rem 2rem;
+        text-align: center;
+        cursor: pointer;
+        transition: var(--transition-base);
+        background: var(--gray-50);
+    }
+    .upload-area:hover, .upload-area.is-dragover {
+        background: rgba(37, 99, 235, 0.05);
+        border-color: var(--primary-blue);
+    }
+    .upload-area .upload-icon i {
+        font-size: 3rem;
+        color: var(--primary-blue);
+    }
+    .upload-area .upload-text {
+        color: var(--gray-600);
+        font-weight: 500;
+        margin-top: 1rem;
+    }
+    #diploma_file {
+        display: none;
+    }
+    #file-name {
+        font-weight: 600;
+        color: var(--success-green);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center animate-fade-in">
+    <div class="col-lg-10">
+        <!-- Modern Step indicator -->
+        <div class="step-indicator-modern">
+            <div class="step-modern active">
+                <div class="step-number-modern">1</div>
+                <div class="step-title-modern">
+                    {% if language == 'ar' %}رفع الشهادة{% else %}Upload Diploma{% endif %}
+                </div>
+            </div>
+            <div class="step-modern">
+                <div class="step-number-modern">2</div>
+                <div class="step-title-modern">
+                    {% if language == 'ar' %}المعلومات الشخصية{% else %}Personal Info{% endif %}
+                </div>
+            </div>
+            <div class="step-modern">
+                <div class="step-number-modern">3</div>
+                <div class="step-title-modern">
+                    {% if language == 'ar' %}تقييم الاهتمامات{% else %}Interest Assessment{% endif %}
+                </div>
+            </div>
+            <div class="step-modern">
+                <div class="step-number-modern">4</div>
+                <div class="step-title-modern">
+                    {% if language == 'ar' %}النتائج والتوصيات{% else %}Recommendations{% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="card-modern animate-slide-up">
+            <div class="card-header-modern text-center">
+                <h2 class="h3 mb-0">
+                    <i class="fas fa-cloud-upload-alt me-2"></i>
+                    {% if language == 'ar' %}
+                        رفع شهادة التوجيهي
+                    {% else %}
+                        Upload Your Tawjihi Diploma
+                    {% endif %}
+                </h2>
+            </div>
+            <div class="card-body-modern">
+                <div class="alert alert-info-modern">
+                    <i class="fas fa-info-circle me-2"></i>
+                    {% if language == 'ar' %}
+                        اسحب وأفلت صورة واضحة أو ملف PDF لشهادتك هنا، وسنقوم باستخراج العلامات تلقائياً.
+                    {% else %}
+                        Drag and drop a clear image or PDF of your diploma here, and we'll automatically extract the grades.
+                    {% endif %}
+                </div>
+
+                <form method="POST" enctype="multipart/form-data" id="upload-form" class="mt-4">
+                    <label for="diploma_file" class="upload-area" id="upload-area">
+                        <div class="upload-icon">
+                            <i class="fas fa-file-import"></i>
+                        </div>
+                        <div class="upload-text">
+                            <p class="mb-1">
+                                {% if language == 'ar' %}
+                                    <strong>اختر ملفًا</strong> أو اسحبه وأفلته هنا
+                                {% else %}
+                                    <strong>Choose a file</strong> or drag it here
+                                {% endif %}
+                            </p>
+                            <small class="text-muted">
+                                {% if language == 'ar' %}
+                                    يدعم: PDF, JPG, PNG
+                                {% else %}
+                                    Supports: PDF, JPG, PNG
+                                {% endif %}
+                            </small>
+                            <div id="file-name" class="mt-2"></div>
+                        </div>
+                    </label>
+                    <input type="file" id="diploma_file" name="diploma_file" accept=".pdf,.jpg,.jpeg,.png">
+                    
+                    <div class="text-center mt-4">
+                        <button type="submit" class="btn btn-gradient px-5 py-3" id="submit-btn" disabled>
+                            <i class="fas fa-upload me-2"></i>
+                            {% if language == 'ar' %}
+                                رفع ومتابعة
+                            {% else %}
+                                Upload & Continue
+                            {% endif %}
+                        </button>
+                    </div>
+                </form>
+
+                <hr class="my-5">
+
+                <div class="text-center">
+                    <p class="text-muted">
+                        {% if language == 'ar' %}
+                            هل تفضل إدخال علاماتك بنفسك؟
+                        {% else %}
+                            Prefer to enter your grades manually?
+                        {% endif %}
+                    </p>
+                    <a href="{{ url_for('manual_entry') }}" class="btn btn-glass">
+                        <i class="fas fa-keyboard me-2"></i>
+                        {% if language == 'ar' %}
+                            الانتقال إلى الإدخال اليدوي
+                        {% else %}
+                            Switch to Manual Entry
+                        {% endif %}
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- How it works section -->
+        <div class="glass-card mt-5 p-5 animate-slide-up">
+            <h3 class="text-center fw-bold mb-5">{% if language == 'ar' %}كيف تتم معالجة شهادتك؟{% else %}How Your Diploma is Processed{% endif %}</h3>
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="p-3">
+                        <div class="icon-circle bg-primary bg-opacity-10 mx-auto mb-3" style="width: 80px; height: 80px;"><i class="fas fa-file-import text-primary fa-2x"></i></div>
+                        <h5 class="fw-semibold">{% if language == 'ar' %}1. الاستلام الآمن{% else %}1. Secure Reception{% endif %}</h5>
+                        <p class="small text-muted">{% if language == 'ar' %}نستلم ملف الشهادة عبر اتصال مشفر وآمن.{% else %}We receive your diploma file over a secure, encrypted connection.{% endif %}</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                     <div class="p-3">
+                        <div class="icon-circle bg-success bg-opacity-10 mx-auto mb-3" style="width: 80px; height: 80px;"><i class="fas fa-robot text-success fa-2x"></i></div>
+                        <h5 class="fw-semibold">{% if language == 'ar' %}2. التحليل الذكي{% else %}2. Smart Analysis{% endif %}</h5>
+                        <p class="small text-muted">{% if language == 'ar' %}يستخدم نظام الذكاء الاصطناعي تقنية OCR لقراءة النصوص والأرقام.{% else %}Our AI uses OCR technology to read the text and numbers.{% endif %}</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                     <div class="p-3">
+                        <div class="icon-circle bg-danger bg-opacity-10 mx-auto mb-3" style="width: 80px; height: 80px;"><i class="fas fa-trash-alt text-danger fa-2x"></i></div>
+                        <h5 class="fw-semibold">{% if language == 'ar' %}3. الحذف الفوري{% else %}3. Instant Deletion{% endif %}</h5>
+                        <p class="small text-muted">{% if language == 'ar' %}بعد استخراج البيانات، يتم حذف ملفك فورًا من خوادمنا حفاظًا على خصوصيتك.{% else %}After extracting the data, your file is immediately deleted from our servers for your privacy.{% endif %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const uploadArea = document.getElementById('upload-area');
+    const fileInput = document.getElementById('diploma_file');
+    const fileNameDisplay = document.getElementById('file-name');
+    const submitBtn = document.getElementById('submit-btn');
+
+    if (!uploadArea) return;
+
+    // --- Drag and Drop functionality ---
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+        uploadArea.addEventListener(eventName, preventDefaults, false);
+    });
+
+    function preventDefaults(e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+
+    ['dragenter', 'dragover'].forEach(eventName => {
+        uploadArea.addEventListener(eventName, () => uploadArea.classList.add('is-dragover'), false);
+    });
+
+    ['dragleave', 'drop'].forEach(eventName => {
+        uploadArea.addEventListener(eventName, () => uploadArea.classList.remove('is-dragover'), false);
+    });
+
+    uploadArea.addEventListener('drop', handleDrop, false);
+
+    function handleDrop(e) {
+        let dt = e.dataTransfer;
+        let files = dt.files;
+        handleFiles(files);
+    }
+
+    // --- Handle file selection (from drop or click) ---
+    fileInput.addEventListener('change', function() {
+        handleFiles(this.files);
+    });
+
+    function handleFiles(files) {
+        if (files.length > 0) {
+            const file = files[0];
+            fileNameDisplay.textContent = `{% if language == 'ar' %}الملف المحدد:{% else %}Selected File:{% endif %} ${file.name}`;
+            fileInput.files = files; // Ensure file is set for form submission
+            submitBtn.disabled = false;
+        } else {
+            fileNameDisplay.textContent = '';
+            submitBtn.disabled = true;
+        }
+    }
+});
+</script>
+{% endblock %}

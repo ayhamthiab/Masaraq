@@ -1,0 +1,38 @@
+question_id,text,type,category,category_weight,field_weights
+q1,إلى أي درجة يؤثر رأي والديك في اختيار التخصص؟,likert,social_factors,0.2,"{'Medicine': 0.2, 'Engineering': 0.1}"
+q2,هل ستختار تخصصًا مختلفًا لو كان رأي أهلك مخالف لرغبتك؟,multiple_choice,social_factors,0.2,"{'Medicine': 0.2, 'Engineering': 0.1}"
+q3,مدى أهمية أن يكون تخصصك ذو مكانة عالية في المجتمع؟,likert,social_factors,0.2,"{'Medicine': 0.3, 'Engineering': 0.2, 'Business': 0.2, 'Law': 0.25}"
+q4,لو كان تخصص ذو مكانة اجتماعية عالية لكن لا تحبه، هل ستختاره؟,multiple_choice,social_factors,0.2,"{'Medicine': 0.2, 'Engineering': 0.2, 'Law': 0.2}"
+q5,ما مدى اهتمامك بفرص العمل المستقبلية عند اختيار التخصص؟,likert,social_factors,0.2,"{'Business': 0.3, 'Engineering': 0.2, 'Medicine': 0.2, 'Digital Economy': 0.2}"
+q6,إذا كان التخصص الذي تحبه قليل الطلب في السوق، ماذا ستفعل؟,multiple_choice,social_factors,0.2,"{'Business': 0.2, 'Engineering': 0.1}"
+q7,ما هو مستوى متوسط دخل الأسرة؟,multiple_choice,social_factors,0.2,{'Business': 0.1}
+q8,أشعر بالارتباك والتوتر عند التحدث أمام مجموعة من الأشخاص,likert,personality,0.3,"{'Humanities': -0.2, 'Business': -0.1, 'Law': -0.15}"
+q9,هل تضطر لكتابة ما تود شرائه قبل الذهاب إلى السوق؟,likert,personality,0.3,{'Business': 0.2}
+q10,أشعر بالمسؤولية عندما توكل إلي مهمة ما,likert,personality,0.3,"{'Engineering': 0.2, 'Medicine': 0.2, 'Law': 0.2}"
+q11,إذا رأيت طفلًا يحاول قطع الشارع، لا أتردد لمساعدته,likert,personality,0.3,"{'Medicine': 0.3, 'Humanities': 0.15, 'Sharia': 0.2, 'Nursing': 0.3, 'Midwifery': 0.3, 'Audiology and Speech Sciences': 0.2, 'Physical Therapy': 0.3, 'Anesthesia and Resuscitation': 0.2}"
+q12,أفضل العمل لوحدي عن العمل مع مجموعة,likert,personality,0.3,"{'Science': 0.2, 'Engineering': 0.1}"
+q13,أمتنع أحيانًا عن المشاركة في الحصص الصفية بسبب التوتر,likert,personality,0.3,{'Humanities': -0.2}
+q14,أنجح بالتأثير على الآخرين وإقناعهم,likert,personality,0.3,"{'Business': 0.3, 'Humanities': 0.2, 'Law': 0.25}"
+q15,طلب منك صديقك إثبات أن الألم شعور حقيقي، ماذا تفعل؟,multiple_choice,personality,0.3,"{'Science': 0.3, 'Medicine': 0.2}"
+q16,تم منحك عملًا في شركة ناشئة، ردة فعلك؟,multiple_choice,personality,0.3,"{'Business': 0.3, 'Engineering': 0.2}"
+q17,أي جملة توافق عليها أكثر؟,multiple_choice,personality,0.3,"{'Fine Arts': 0.2, 'Humanities': 0.2, 'Sharia': 0.15}"
+q18,أفكر بشكل منطقي وأهتم بالقواعد أكثر من المشاعر,likert,personality,0.3,"{'Engineering': 0.3, 'Science': 0.2, 'Law': 0.3}"
+q19,أستطيع الدراسة أو العمل خلف المكتب لمدة طويلة,multiple_choice,personality,0.3,"{'Engineering': 0.2, 'Business': 0.2}"
+q20,أهرع عند رؤيتي للدم ولا أستطيع تحمله,likert,skills_and_preferences,0.3,"{'Medicine': -0.4, 'Medical Laboratory Sciences': -0.2, 'Pharmacy': -0.2, 'Nursing': -0.3, 'Midwifery': -0.3, 'Medical Imaging': -0.1, 'Cardiopulmonary Perfusion Technology': -0.3, 'Anesthesia and Resuscitation': -0.3}"
+q21,أميل نحو التعليم الحرفي أو التطبيقي أكثر من الأكاديمي,likert,skills_and_preferences,0.3,"{'Engineering': 0.2, 'Fine Arts': 0.1}"
+q22,أشعر بالفضول حيال التحديثات التكنولوجية,likert,skills_and_preferences,0.3,"{'Engineering': 0.4, 'Science': 0.2, 'Medical Laboratory Sciences': 0.2, 'Pharmacy': 0.3, 'Optometry': 0.2, 'Medical Imaging': 0.2, 'Cardiopulmonary Perfusion Technology': 0.2, 'Digital Economy': 0.3, 'Computer Engineering': 0.4, 'Computer Science': 0.3, 'Computer Science in the Job Market': 0.3}"
+q23,أنتبه إلى الأخطاء اللغوية وأرغب بتصحيحها,likert,skills_and_preferences,0.3,{'Humanities': 0.3}
+q24,أحرص على متابعة القضايا السياسية وتحليلها,likert,skills_and_preferences,0.3,"{'Humanities': 0.25, 'Law': 0.3, 'Digital Media and Communication': 0.2}"
+q25,هل تعاني من حساسية جلدية أو تنفسية حيال النباتات؟,likert,skills_and_preferences,0.3,"{'Medicine': -0.2, 'Medical Laboratory Sciences': -0.1, 'Pharmacy': -0.2, 'Nursing': -0.1, 'Audiology and Speech Sciences': -0.1}"
+q26,هل تتميز بأسلوب لباس مختلف وملفت؟,likert,skills_and_preferences,0.3,{'Fine Arts': 0.3}
+q27,ما هو الرقم الذي لا ينتمي لمجموعة الأرقام؟,multiple_choice,skills_and_preferences,0.3,"{'Science': 0.3, 'Engineering': 0.2}"
+q28,ما هي الكلمة التي لا تنتمي لبقية الكلمات؟,multiple_choice,skills_and_preferences,0.3,"{'Humanities': 0.3, 'Law': 0.2}"
+q29,هل يجوز لأي رجل عربي الزواج من أخت أرملته؟,multiple_choice,skills_and_preferences,0.3,"{'Humanities': 0.2, 'Science': 0.1, 'Sharia': 0.3}"
+q30,ما هو اللون الذي استخدمته لتلوين كلمة 'بني'؟,multiple_choice,skills_and_preferences,0.3,"{'Humanities': 0.3, 'Fine Arts': 0.3}"
+q31,ما هو لون الكوب؟,multiple_choice,skills_and_preferences,0.3,"{'Humanities': 0.3, 'Fine Arts': 0.3, 'Digital Media and Communication': 0.2}"
+q32,أحب ممارسة:,multiple_choice,activities,0.2,"{'Fine Arts': 0.4, 'Physical Therapy': 0.2}"
+q33,أحب متابعة أفلام:,multiple_choice,activities,0.2,"{'Fine Arts': 0.2, 'Science': 0.2, 'Law': 0.15}"
+q34,أحب الأنشطة الخارجية:,multiple_choice,activities,0.2,"{'Fine Arts': 0.1, 'Humanities': 0.1}"
+q35,أستمتع أكثر بـ:,multiple_choice,activities,0.2,"{'Engineering': 0.3, 'Science': 0.2, 'Fine Arts': 0.2, 'Medical Laboratory Sciences': 0.2, 'Pharmacy': 0.2, 'Optometry': 0.1, 'Computer Engineering': 0.4, 'Computer Science': 0.3, 'Computer Science in the Job Market': 0.3}"
+q36,عندما أكون لوحدي أحب:,multiple_choice,activities,0.2,"{'Fine Arts': 0.2, 'Humanities': 0.2}"
+q37,أجد نفسي أكثر إبداعًا عندما:,multiple_choice,activities,0.2,"{'Fine Arts': 0.3, 'Science': 0.2, 'Engineering': 0.2}"

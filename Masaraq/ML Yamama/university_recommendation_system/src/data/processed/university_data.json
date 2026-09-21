@@ -1,0 +1,1393 @@
+{
+  "faculties": [
+    {
+      "name": "Science",
+      "minimum_gpa_regular": 65,
+      "minimum_gpa_parallel": 65,
+      "programs": [
+        {
+          "name": "Biology and Biotechnology",
+          "core_subjects": [
+            "Biology",
+            "Chemistry"
+          ],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 45,
+          "expected_salary": 2800,
+          "future_jobs": "Biological research, pharmaceutical industry, medical laboratories",
+          "description": "Study of biological sciences and biotechnology."
+        },
+        {
+          "name": "Mathematics",
+          "core_subjects": [
+            "Mathematics"
+          ],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 40,
+          "expected_salary": 3000,
+          "future_jobs": "Teaching, data analysis, banking",
+          "description": "Study of theoretical and applied mathematics."
+        },
+        {
+          "name": "Mathematics and Data Science",
+          "core_subjects": [
+            "Mathematics"
+          ],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 35,
+          "expected_salary": 3500,
+          "future_jobs": "Data science, AI, technology companies",
+          "description": "Integration of mathematics with data analysis."
+        },
+        {
+          "name": "Physics",
+          "core_subjects": [
+            "Physics",
+            "Mathematics"
+          ],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 42,
+          "expected_salary": 3200,
+          "future_jobs": "Physics research, energy industry",
+          "description": "Study of the laws of nature and energy."
+        },
+        {
+          "name": "Applied Physics Technology",
+          "core_subjects": [
+            "Physics",
+            "Mathematics"
+          ],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 40,
+          "expected_salary": 3300,
+          "future_jobs": "Technology development, engineering",
+          "description": "Application of physics in technology."
+        },
+        {
+          "name": "Chemistry",
+          "core_subjects": [
+            "Chemistry"
+          ],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 45,
+          "expected_salary": 2900,
+          "future_jobs": "Chemical industry, laboratories",
+          "description": "Study of materials and chemical reactions."
+        },
+        {
+          "name": "Applied Chemistry",
+          "core_subjects": [
+            "Chemistry"
+          ],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 42,
+          "expected_salary": 3100,
+          "future_jobs": "Industry, research",
+          "description": "Application of chemistry in industry."
+        },
+        {
+          "name": "Molecular Diagnostics Technology",
+          "core_subjects": [
+            "Biology",
+            "Chemistry"
+          ],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 40,
+          "expected_salary": 3400,
+          "future_jobs": "Diagnostic laboratories",
+          "description": "Molecular diagnostics techniques."
+        }
+      ]
+    },
+    {
+      "name": "Humanities and Education",
+      "minimum_gpa_regular": 65,
+      "minimum_gpa_parallel": 65,
+      "programs": [
+        {
+          "name": "Arabic Language and Literature",
+          "core_subjects": [
+            "Arabic"
+          ],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 50,
+          "expected_salary": 2200,
+          "future_jobs": "Teaching, writing, media",
+          "description": "Study of Arabic language and literature."
+        },
+        {
+          "name": "English Language and Literature",
+          "core_subjects": [
+            "English"
+          ],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 48,
+          "expected_salary": 2400,
+          "future_jobs": "Translation, teaching, international business",
+          "description": "Study of English language and literature."
+        },
+        {
+          "name": "French Language",
+          "core_subjects": [
+            "English"
+          ],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 50,
+          "expected_salary": 2300,
+          "future_jobs": "Diplomacy, translation",
+          "description": "Study of the French language."
+        },
+        {
+          "name": "History",
+          "core_subjects": [
+            "History"
+          ],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 55,
+          "expected_salary": 2100,
+          "future_jobs": "History teaching, research",
+          "description": "Study of history."
+        },
+        {
+          "name": "Geography",
+          "core_subjects": [
+            "Geography"
+          ],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 52,
+          "expected_salary": 2300,
+          "future_jobs": "Geography, GIS",
+          "description": "Study of geography."
+        },
+        {
+          "name": "Tourism and Archaeology",
+          "core_subjects": [],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 45,
+          "expected_salary": 2500,
+          "future_jobs": "Tourism, archaeology",
+          "description": "Management of tourism and archaeology."
+        },
+        {
+          "name": "Psychology – Psychological Counseling",
+          "core_subjects": [],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 50,
+          "expected_salary": 2400,
+          "future_jobs": "Psychological counseling",
+          "description": "Psychology with counseling."
+        },
+        {
+          "name": "Social Work",
+          "core_subjects": [],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 48,
+          "expected_salary": 2100,
+          "future_jobs": "Social work",
+          "description": "Social work."
+        },
+        {
+          "name": "Physical Education",
+          "core_subjects": [],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 50,
+          "expected_salary": 2200,
+          "future_jobs": "Sports coaching",
+          "description": "Physical education."
+        },
+        {
+          "name": "Kindergarten",
+          "core_subjects": [],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 48,
+          "expected_salary": 2000,
+          "future_jobs": "Kindergarten teaching",
+          "description": "Kindergarten education."
+        },
+        {
+          "name": "Elementary School Teacher",
+          "core_subjects": [],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 50,
+          "expected_salary": 2100,
+          "future_jobs": "Elementary teaching",
+          "description": "Training elementary school teachers."
+        }
+      ]
+    },
+    {
+      "name": "Sharia",
+      "minimum_gpa_regular": 65,
+      "minimum_gpa_parallel": 65,
+      "programs": [
+        {
+          "name": "Jurisprudence and Legislation",
+          "core_subjects": [
+            "Islamic Education"
+          ],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 40,
+          "expected_salary": 2500,
+          "future_jobs": "Sharia judiciary, teaching",
+          "description": "Study of Islamic jurisprudence."
+        },
+        {
+          "name": "Fundamentals of Religion",
+          "core_subjects": [
+            "Islamic Education"
+          ],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 42,
+          "expected_salary": 2400,
+          "future_jobs": "Preaching, religious teaching",
+          "description": "Fundamentals of Islamic religion."
+        },
+        {
+          "name": "Islamic Banking",
+          "core_subjects": [
+            "Islamic Education"
+          ],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 38,
+          "expected_salary": 3000,
+          "future_jobs": "Islamic banking",
+          "description": "Islamic banking."
+        }
+      ]
+    },
+    {
+      "name": "Engineering and Information Technology",
+      "minimum_gpa_regular": 80,
+      "minimum_gpa_parallel": 75,
+      "programs": [
+        {
+          "name": "Civil Engineering",
+          "core_subjects": [
+            "Mathematics",
+            "Physics",
+            "Chemistry"
+          ],
+          "minimum_gpa_regular": 80,
+          "minimum_gpa_parallel": 75,
+          "unemployment_rate": 35,
+          "expected_salary": 3500,
+          "future_jobs": "Construction, urban planning",
+          "description": "Civil engineering."
+        },
+        {
+          "name": "Geomatic Engineering",
+          "core_subjects": [
+            "Mathematics",
+            "Physics"
+          ],
+          "minimum_gpa_regular": 80,
+          "minimum_gpa_parallel": 75,
+          "unemployment_rate": 36,
+          "expected_salary": 3400,
+          "future_jobs": "Surveying, GIS",
+          "description": "Geomatic engineering."
+        },
+        {
+          "name": "Architectural Engineering",
+          "core_subjects": [
+            "Mathematics",
+            "Physics"
+          ],
+          "minimum_gpa_regular": 80,
+          "minimum_gpa_parallel": 75,
+          "unemployment_rate": 38,
+          "expected_salary": 3600,
+          "future_jobs": "Building design",
+          "description": "Architectural engineering."
+        },
+        {
+          "name": "Construction Engineering",
+          "core_subjects": [
+            "Mathematics",
+            "Physics"
+          ],
+          "minimum_gpa_regular": 80,
+          "minimum_gpa_parallel": 75,
+          "unemployment_rate": 37,
+          "expected_salary": 3400,
+          "future_jobs": "Construction project management",
+          "description": "Construction engineering."
+        },
+        {
+          "name": "Planning Engineering",
+          "core_subjects": [
+            "Mathematics",
+            "Physics"
+          ],
+          "minimum_gpa_regular": 80,
+          "minimum_gpa_parallel": 75,
+          "unemployment_rate": 35,
+          "expected_salary": 3300,
+          "future_jobs": "Urban planning",
+          "description": "Urban planning."
+        },
+        {
+          "name": "Mechanical Engineering",
+          "core_subjects": [
+            "Mathematics",
+            "Physics",
+            "Chemistry"
+          ],
+          "minimum_gpa_regular": 80,
+          "minimum_gpa_parallel": 75,
+          "unemployment_rate": 36,
+          "expected_salary": 3500,
+          "future_jobs": "Mechanical industry",
+          "description": "Mechanical engineering."
+        },
+        {
+          "name": "Chemical Engineering",
+          "core_subjects": [
+            "Mathematics",
+            "Physics",
+            "Chemistry"
+          ],
+          "minimum_gpa_regular": 80,
+          "minimum_gpa_parallel": 75,
+          "unemployment_rate": 37,
+          "expected_salary": 3600,
+          "future_jobs": "Chemical industry",
+          "description": "Chemical engineering."
+        },
+        {
+          "name": "Industrial Engineering",
+          "core_subjects": [
+            "Mathematics",
+            "Physics"
+          ],
+          "minimum_gpa_regular": 80,
+          "minimum_gpa_parallel": 75,
+          "unemployment_rate": 35,
+          "expected_salary": 3400,
+          "future_jobs": "Industrial management",
+          "description": "Industrial engineering."
+        },
+        {
+          "name": "Computer Engineering",
+          "core_subjects": [
+            "Mathematics",
+            "Technology"
+          ],
+          "minimum_gpa_regular": 90,
+          "minimum_gpa_parallel": 80,
+          "unemployment_rate": 30,
+          "expected_salary": 4500,
+          "future_jobs": "Software development",
+          "description": "Computer engineering."
+        },
+        {
+          "name": "Electrical Engineering",
+          "core_subjects": [
+            "Mathematics",
+            "Physics"
+          ],
+          "minimum_gpa_regular": 80,
+          "minimum_gpa_parallel": 75,
+          "unemployment_rate": 36,
+          "expected_salary": 3500,
+          "future_jobs": "Electricity, energy",
+          "description": "Electrical engineering."
+        },
+        {
+          "name": "Mechatronics Engineering",
+          "core_subjects": [
+            "Mathematics",
+            "Physics"
+          ],
+          "minimum_gpa_regular": 80,
+          "minimum_gpa_parallel": 75,
+          "unemployment_rate": 35,
+          "expected_salary": 3600,
+          "future_jobs": "Robotics",
+          "description": "Mechatronics."
+        },
+        {
+          "name": "Energy and Environmental Engineering",
+          "core_subjects": [
+            "Mathematics",
+            "Physics",
+            "Chemistry"
+          ],
+          "minimum_gpa_regular": 80,
+          "minimum_gpa_parallel": 75,
+          "unemployment_rate": 37,
+          "expected_salary": 3500,
+          "future_jobs": "Renewable energy",
+          "description": "Energy and environment."
+        },
+        {
+          "name": "Network Engineering",
+          "core_subjects": [
+            "Mathematics",
+            "Technology"
+          ],
+          "minimum_gpa_regular": 80,
+          "minimum_gpa_parallel": 75,
+          "unemployment_rate": 32,
+          "expected_salary": 4000,
+          "future_jobs": "Networks, AI",
+          "description": "Smart networks."
+        },
+        {
+          "name": "Computer Science",
+          "core_subjects": [
+            "Mathematics",
+            "Technology"
+          ],
+          "minimum_gpa_regular": 70,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 30,
+          "expected_salary": 4200,
+          "future_jobs": "Programming, IT",
+          "description": "Computer science."
+        },
+        {
+          "name": "Computer Science in the Job Market",
+          "core_subjects": [
+            "Mathematics",
+            "Technology"
+          ],
+          "minimum_gpa_regular": 70,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 31,
+          "expected_salary": 4100,
+          "future_jobs": "IT jobs",
+          "description": "Applied computer science."
+        },
+        {
+          "name": "Management Information Systems",
+          "core_subjects": [
+            "Mathematics",
+            "Technology"
+          ],
+          "minimum_gpa_regular": 70,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 33,
+          "expected_salary": 3800,
+          "future_jobs": "Information management",
+          "description": "MIS."
+        },
+        {
+          "name": "Cybersecurity",
+          "core_subjects": [
+            "Mathematics",
+            "Technology"
+          ],
+          "minimum_gpa_regular": 70,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 28,
+          "expected_salary": 4300,
+          "future_jobs": "Information security",
+          "description": "Cybersecurity."
+        }
+      ]
+    },
+    {
+      "name": "Medicine and Health Sciences",
+      "minimum_gpa_regular": 85,
+      "minimum_gpa_parallel": 75,
+      "programs": [
+        {
+          "name": "Human Medicine",
+          "core_subjects": [
+            "Mathematics",
+            "Physics",
+            "Biology"
+          ],
+          "minimum_gpa_regular": 95,
+          "minimum_gpa_parallel": 85,
+          "unemployment_rate": 35,
+          "expected_salary": 4500,
+          "future_jobs": "General practitioner, medical specialties",
+          "description": "Human medicine."
+        },
+        {
+          "name": "Dentistry",
+          "core_subjects": [
+            "Mathematics",
+            "Physics",
+            "Biology"
+          ],
+          "minimum_gpa_regular": 98,
+          "minimum_gpa_parallel": 85,
+          "unemployment_rate": 36,
+          "expected_salary": 4200,
+          "future_jobs": "Dentistry",
+          "description": "Dentistry."
+        },
+        {
+          "name": "Pharmacy",
+          "core_subjects": [
+            "Mathematics",
+            "Physics",
+            "Biology"
+          ],
+          "minimum_gpa_regular": 90,
+          "minimum_gpa_parallel": 80,
+          "unemployment_rate": 38,
+          "expected_salary": 3800,
+          "future_jobs": "Pharmacist",
+          "description": "Pharmacy."
+        },
+        {
+          "name": "Optometry",
+          "core_subjects": [
+            "Physics",
+            "Biology"
+          ],
+          "minimum_gpa_regular": 80,
+          "minimum_gpa_parallel": 70,
+          "unemployment_rate": 40,
+          "expected_salary": 3400,
+          "future_jobs": "Optometry",
+          "description": "Optics sciences."
+        },
+        {
+          "name": "Medical Laboratory Sciences",
+          "core_subjects": [
+            "Biology",
+            "Chemistry"
+          ],
+          "minimum_gpa_regular": 85,
+          "minimum_gpa_parallel": 70,
+          "unemployment_rate": 38,
+          "expected_salary": 3500,
+          "future_jobs": "Medical laboratories",
+          "description": "Medical laboratory sciences."
+        },
+        {
+          "name": "Medical Imaging",
+          "core_subjects": [
+            "Physics",
+            "Biology"
+          ],
+          "minimum_gpa_regular": 75,
+          "minimum_gpa_parallel": 70,
+          "unemployment_rate": 40,
+          "expected_salary": 3300,
+          "future_jobs": "Medical imaging",
+          "description": "Medical imaging."
+        },
+        {
+          "name": "Audiology and Speech Sciences",
+          "core_subjects": [
+            "Biology"
+          ],
+          "minimum_gpa_regular": 85,
+          "minimum_gpa_parallel": 70,
+          "unemployment_rate": 38,
+          "expected_salary": 3400,
+          "future_jobs": "Audiology and speech",
+          "description": "Audiology and speech."
+        },
+        {
+          "name": "Physical Therapy",
+          "core_subjects": [
+            "Biology",
+            "Physics"
+          ],
+          "minimum_gpa_regular": 75,
+          "minimum_gpa_parallel": 70,
+          "unemployment_rate": 40,
+          "expected_salary": 3500,
+          "future_jobs": "Physical therapy",
+          "description": "Physical therapy."
+        },
+        {
+          "name": "Cardiopulmonary Perfusion Technology",
+          "core_subjects": [
+            "Biology"
+          ],
+          "minimum_gpa_regular": 80,
+          "minimum_gpa_parallel": 70,
+          "unemployment_rate": 37,
+          "expected_salary": 3600,
+          "future_jobs": "Cardiopulmonary perfusion",
+          "description": "Cardiopulmonary perfusion."
+        },
+        {
+          "name": "Anesthesia and Resuscitation",
+          "core_subjects": [
+            "Biology"
+          ],
+          "minimum_gpa_regular": 80,
+          "minimum_gpa_parallel": 70,
+          "unemployment_rate": 38,
+          "expected_salary": 3400,
+          "future_jobs": "Anesthesia",
+          "description": "Technical anesthesia."
+        },
+        {
+          "name": "Nursing",
+          "core_subjects": [
+            "Biology"
+          ],
+          "minimum_gpa_regular": 75,
+          "minimum_gpa_parallel": 70,
+          "unemployment_rate": 35,
+          "expected_salary": 3200,
+          "future_jobs": "Nursing",
+          "description": "Nursing."
+        },
+        {
+          "name": "Midwifery",
+          "core_subjects": [
+            "Biology"
+          ],
+          "minimum_gpa_regular": 75,
+          "minimum_gpa_parallel": 70,
+          "unemployment_rate": 36,
+          "expected_salary": 3200,
+          "future_jobs": "Midwifery",
+          "description": "Midwifery."
+        }
+      ]
+    },
+    {
+      "name": "Business and Communication",
+      "minimum_gpa_regular": 65,
+      "minimum_gpa_parallel": 65,
+      "programs": [
+        {
+          "name": "Digital Economy",
+          "core_subjects": [
+            "Mathematics",
+            "Management and Economics"
+          ],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 40,
+          "expected_salary": 3000,
+          "future_jobs": "Economist, banking",
+          "description": "Study of the digital economy."
+        },
+        {
+          "name": "Digital Media and Communication",
+          "core_subjects": [],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 42,
+          "expected_salary": 2800,
+          "future_jobs": "Digital media",
+          "description": "Digital media."
+        },
+        {
+          "name": "Radio and Television",
+          "core_subjects": [],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 43,
+          "expected_salary": 2600,
+          "future_jobs": "Radio, television",
+          "description": "Radio and television."
+        },
+        {
+          "name": "Public Relations",
+          "core_subjects": [],
+          "minimum_gpa_regular": 80,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 40,
+          "expected_salary": 2800,
+          "future_jobs": "Public relations",
+          "description": "Public relations."
+        },
+        {
+          "name": "Accounting",
+          "core_subjects": [
+            "Mathematics",
+            "Management and Economics"
+          ],
+          "minimum_gpa_regular": 80,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 38,
+          "expected_salary": 3300,
+          "future_jobs": "Accounting, auditing",
+          "description": "Accounting."
+        },
+        {
+          "name": "Business Administration",
+          "core_subjects": [
+            "Management and Economics"
+          ],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 40,
+          "expected_salary": 3100,
+          "future_jobs": "Business management, entrepreneurship",
+          "description": "Business administration."
+        },
+        {
+          "name": "Financial and Banking Sciences",
+          "core_subjects": [
+            "Mathematics",
+            "Management and Economics"
+          ],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 39,
+          "expected_salary": 3500,
+          "future_jobs": "Banking, finance",
+          "description": "Financial sciences."
+        },
+        {
+          "name": "Financial Technology",
+          "core_subjects": [
+            "Mathematics",
+            "Technology"
+          ],
+          "minimum_gpa_regular": 70,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 35,
+          "expected_salary": 3800,
+          "future_jobs": "Fintech",
+          "description": "Financial technology."
+        },
+        {
+          "name": "Digital Marketing and Communication",
+          "core_subjects": [],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 40,
+          "expected_salary": 3000,
+          "future_jobs": "Digital marketing",
+          "description": "Digital marketing."
+        },
+        {
+          "name": "Investment and Real Estate Development",
+          "core_subjects": [],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 38,
+          "expected_salary": 3300,
+          "future_jobs": "Real estate",
+          "description": "Real estate investment."
+        },
+        {
+          "name": "Business Intelligence",
+          "core_subjects": [
+            "Mathematics",
+            "Technology"
+          ],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 36,
+          "expected_salary": 3600,
+          "future_jobs": "Business intelligence",
+          "description": "Business Intelligence."
+        }
+      ]
+    },
+    {
+      "name": "Agriculture and Veterinary Medicine",
+      "minimum_gpa_regular": 65,
+      "minimum_gpa_parallel": 65,
+      "programs": [
+        {
+          "name": "Veterinary Medicine",
+          "core_subjects": [
+            "Biology",
+            "Chemistry"
+          ],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 35,
+          "expected_salary": 3500,
+          "future_jobs": "Veterinary medicine",
+          "description": "Veterinary medicine."
+        },
+        {
+          "name": "Nutrition and Food Processing",
+          "core_subjects": [
+            "Biology",
+            "Chemistry"
+          ],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 38,
+          "expected_salary": 2800,
+          "future_jobs": "Food industry",
+          "description": "Nutrition and food processing."
+        },
+        {
+          "name": "Agricultural Engineering",
+          "core_subjects": [
+            "Mathematics",
+            "Biology"
+          ],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 40,
+          "expected_salary": 3100,
+          "future_jobs": "Agricultural engineering",
+          "description": "Agricultural engineering."
+        }
+      ]
+    },
+    {
+      "name": "Law and Political Science",
+      "minimum_gpa_regular": 75,
+      "minimum_gpa_parallel": 65,
+      "programs": [
+        {
+          "name": "Law",
+          "core_subjects": [
+            "Arabic"
+          ],
+          "minimum_gpa_regular": 80,
+          "minimum_gpa_parallel": 75,
+          "unemployment_rate": 40,
+          "expected_salary": 3800,
+          "future_jobs": "Law practice, judiciary",
+          "description": "Study of law."
+        },
+        {
+          "name": "Political Science",
+          "core_subjects": [],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 45,
+          "expected_salary": 3000,
+          "future_jobs": "Politics, government administration",
+          "description": "Political science."
+        }
+      ]
+    },
+    {
+      "name": "Fine Arts",
+      "minimum_gpa_regular": 65,
+      "minimum_gpa_parallel": 65,
+      "programs": [
+        {
+          "name": "Music",
+          "core_subjects": [],
+          "minimum_gpa_regular": 60,
+          "minimum_gpa_parallel": 60,
+          "unemployment_rate": 50,
+          "expected_salary": 2200,
+          "future_jobs": "Music, artistic teaching",
+          "description": "Study of music."
+        },
+        {
+          "name": "Interior Design",
+          "core_subjects": [],
+          "minimum_gpa_regular": 70,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 48,
+          "expected_salary": 2900,
+          "future_jobs": "Interior design",
+          "description": "Interior design."
+        },
+        {
+          "name": "Painting and Drawing",
+          "core_subjects": [],
+          "minimum_gpa_regular": 60,
+          "minimum_gpa_parallel": 60,
+          "unemployment_rate": 50,
+          "expected_salary": 2400,
+          "future_jobs": "Artist, painting",
+          "description": "Painting and drawing."
+        },
+        {
+          "name": "Graphic Design",
+          "core_subjects": [],
+          "minimum_gpa_regular": 70,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 45,
+          "expected_salary": 3200,
+          "future_jobs": "Graphics, advertising",
+          "description": "Graphic design."
+        },
+        {
+          "name": "Ceramic Art",
+          "core_subjects": [],
+          "minimum_gpa_regular": 60,
+          "minimum_gpa_parallel": 60,
+          "unemployment_rate": 52,
+          "expected_salary": 2200,
+          "future_jobs": "Ceramics",
+          "description": "Ceramic art."
+        },
+        {
+          "name": "Game Design",
+          "core_subjects": [],
+          "minimum_gpa_regular": 70,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 40,
+          "expected_salary": 3600,
+          "future_jobs": "Game development",
+          "description": "Game design."
+        },
+        {
+          "name": "Fashion Design",
+          "core_subjects": [],
+          "minimum_gpa_regular": 65,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 48,
+          "expected_salary": 2800,
+          "future_jobs": "Fashion",
+          "description": "Fashion design."
+        },
+        {
+          "name": "Therapeutic Expressive Art",
+          "core_subjects": [],
+          "minimum_gpa_regular": 70,
+          "minimum_gpa_parallel": 65,
+          "unemployment_rate": 45,
+          "expected_salary": 2500,
+          "future_jobs": "Therapeutic art",
+          "description": "Therapeutic expressive art."
+        }
+      ]
+    }
+  ],
+  "branches_allowed": {
+    "Scientific": {
+      "allowed_programs": [
+        "Biology and Biotechnology",
+        "Mathematics",
+        "Mathematics and Data Science",
+        "Physics",
+        "Applied Physics Technology",
+        "Chemistry",
+        "Applied Chemistry",
+        "Molecular Diagnostics Technology",
+        "Arabic Language and Literature",
+        "English Language and Literature",
+        "French Language",
+        "History",
+        "Geography",
+        "Tourism and Archaeology",
+        "Psychology – Psychological Counseling",
+        "Social Work",
+        "Physical Education",
+        "Kindergarten",
+        "Elementary School Teacher",
+        "Jurisprudence and Legislation",
+        "Fundamentals of Religion",
+        "Islamic Banking",
+        "Civil Engineering",
+        "Geomatic Engineering",
+        "Architectural Engineering",
+        "Construction Engineering",
+        "Planning Engineering",
+        "Mechanical Engineering",
+        "Chemical Engineering",
+        "Industrial Engineering",
+        "Computer Engineering",
+        "Electrical Engineering",
+        "Mechatronics Engineering",
+        "Energy and Environmental Engineering",
+        "Network Engineering",
+        "Computer Science",
+        "Computer Science in the Job Market",
+        "Management Information Systems",
+        "Cybersecurity",
+        "Human Medicine",
+        "Dentistry",
+        "Pharmacy",
+        "Optometry",
+        "Medical Laboratory Sciences",
+        "Medical Imaging",
+        "Audiology and Speech Sciences",
+        "Physical Therapy",
+        "Cardiopulmonary Perfusion Technology",
+        "Anesthesia and Resuscitation",
+        "Nursing",
+        "Midwifery",
+        "Digital Economy",
+        "Digital Media and Communication",
+        "Radio and Television",
+        "Public Relations",
+        "Accounting",
+        "Business Administration",
+        "Financial and Banking Sciences",
+        "Financial Technology",
+        "Digital Marketing and Communication",
+        "Investment and Real Estate Development",
+        "Business Intelligence",
+        "Veterinary Medicine",
+        "Nutrition and Food Processing",
+        "Agricultural Engineering",
+        "Law",
+        "Political Science",
+        "Music",
+        "Interior Design",
+        "Painting and Drawing",
+        "Graphic Design",
+        "Ceramic Art",
+        "Game Design",
+        "Fashion Design",
+        "Therapeutic Expressive Art"
+      ]
+    },
+    "Literary": {
+      "allowed_programs": [
+        "Management Information Systems",
+        "Digital Economy",
+        "Digital Media and Communication",
+        "Radio and Television",
+        "Public Relations",
+        "Accounting",
+        "Business Administration",
+        "Financial and Banking Sciences",
+        "Financial Technology",
+        "Digital Marketing and Communication",
+        "Investment and Real Estate Development",
+        "Business Intelligence",
+        "Arabic Language and Literature",
+        "English Language and Literature",
+        "French Language",
+        "History",
+        "Geography",
+        "Tourism and Archaeology",
+        "Psychology – Psychological Counseling",
+        "Social Work",
+        "Physical Education",
+        "Kindergarten",
+        "Elementary School Teacher",
+        "Music",
+        "Interior Design",
+        "Painting and Drawing",
+        "Graphic Design",
+        "Ceramic Art",
+        "Game Design",
+        "Fashion Design",
+        "Therapeutic Expressive Art",
+        "Jurisprudence and Legislation",
+        "Fundamentals of Religion",
+        "Islamic Banking",
+        "Law"
+      ]
+    },
+    "Sharia": {
+      "allowed_programs": [
+        "Management Information Systems",
+        "Digital Economy",
+        "Digital Media and Communication",
+        "Radio and Television",
+        "Public Relations",
+        "Accounting",
+        "Business Administration",
+        "Financial and Banking Sciences",
+        "Financial Technology",
+        "Digital Marketing and Communication",
+        "Investment and Real Estate Development",
+        "Business Intelligence",
+        "Arabic Language and Literature",
+        "English Language and Literature",
+        "French Language",
+        "History",
+        "Geography",
+        "Tourism and Archaeology",
+        "Psychology – Psychological Counseling",
+        "Social Work",
+        "Physical Education",
+        "Kindergarten",
+        "Elementary School Teacher",
+        "Music",
+        "Interior Design",
+        "Painting and Drawing",
+        "Graphic Design",
+        "Ceramic Art",
+        "Game Design",
+        "Fashion Design",
+        "Therapeutic Expressive Art",
+        "Jurisprudence and Legislation",
+        "Fundamentals of Religion",
+        "Islamic Banking",
+        "Law"
+      ]
+    },
+    "Agricultural": {
+      "allowed_programs": [
+        "Biology and Biotechnology",
+        "Mathematics",
+        "Mathematics and Data Science",
+        "Physics",
+        "Applied Physics Technology",
+        "Chemistry",
+        "Applied Chemistry",
+        "Molecular Diagnostics Technology",
+        "Arabic Language and Literature",
+        "English Language and Literature",
+        "French Language",
+        "History",
+        "Geography",
+        "Tourism and Archaeology",
+        "Psychology – Psychological Counseling",
+        "Social Work",
+        "Physical Education",
+        "Kindergarten",
+        "Elementary School Teacher",
+        "Jurisprudence and Legislation",
+        "Fundamentals of Religion",
+        "Islamic Banking",
+        "Computer Science",
+        "Computer Science in the Job Market",
+        "Management Information Systems",
+        "Cybersecurity",
+        "Digital Economy",
+        "Digital Media and Communication",
+        "Radio and Television",
+        "Public Relations",
+        "Accounting",
+        "Business Administration",
+        "Financial and Banking Sciences",
+        "Financial Technology",
+        "Digital Marketing and Communication",
+        "Investment and Real Estate Development",
+        "Business Intelligence",
+        "Veterinary Medicine",
+        "Nutrition and Food Processing",
+        "Political Science",
+        "Music",
+        "Interior Design",
+        "Painting and Drawing",
+        "Graphic Design",
+        "Ceramic Art",
+        "Game Design",
+        "Fashion Design",
+        "Therapeutic Expressive Art"
+      ]
+    },
+    "Industrial": {
+      "allowed_programs": [
+        "Biology and Biotechnology",
+        "Mathematics",
+        "Mathematics and Data Science",
+        "Physics",
+        "Applied Physics Technology",
+        "Chemistry",
+        "Applied Chemistry",
+        "Molecular Diagnostics Technology",
+        "Arabic Language and Literature",
+        "English Language and Literature",
+        "French Language",
+        "History",
+        "Geography",
+        "Tourism and Archaeology",
+        "Psychology – Psychological Counseling",
+        "Social Work",
+        "Physical Education",
+        "Kindergarten",
+        "Elementary School Teacher",
+        "Jurisprudence and Legislation",
+        "Fundamentals of Religion",
+        "Islamic Banking",
+        "Civil Engineering",
+        "Geomatic Engineering",
+        "Architectural Engineering",
+        "Construction Engineering",
+        "Planning Engineering",
+        "Mechanical Engineering",
+        "Chemical Engineering",
+        "Industrial Engineering",
+        "Computer Engineering",
+        "Electrical Engineering",
+        "Mechatronics Engineering",
+        "Energy and Environmental Engineering",
+        "Network Engineering",
+        "Computer Science",
+        "Computer Science in the Job Market",
+        "Management Information Systems",
+        "Cybersecurity",
+        "Digital Economy",
+        "Digital Media and Communication",
+        "Radio and Television",
+        "Public Relations",
+        "Accounting",
+        "Business Administration",
+        "Financial and Banking Sciences",
+        "Financial Technology",
+        "Digital Marketing and Communication",
+        "Investment and Real Estate Development",
+        "Business Intelligence",
+        "Nutrition and Food Processing",
+        "Agricultural Engineering",
+        "Political Science",
+        "Music",
+        "Interior Design",
+        "Painting and Drawing",
+        "Graphic Design",
+        "Ceramic Art",
+        "Game Design",
+        "Fashion Design",
+        "Therapeutic Expressive Art"
+      ]
+    },
+    "Hotel and Home Economics": {
+      "allowed_programs": [
+        "Management Information Systems",
+        "Digital Economy",
+        "Digital Media and Communication",
+        "Radio and Television",
+        "Public Relations",
+        "Accounting",
+        "Business Administration",
+        "Financial and Banking Sciences",
+        "Financial Technology",
+        "Digital Marketing and Communication",
+        "Investment and Real Estate Development",
+        "Business Intelligence",
+        "Arabic Language and Literature",
+        "English Language and Literature",
+        "French Language",
+        "History",
+        "Geography",
+        "Tourism and Archaeology",
+        "Psychology – Psychological Counseling",
+        "Social Work",
+        "Physical Education",
+        "Kindergarten",
+        "Elementary School Teacher",
+        "Music",
+        "Interior Design",
+        "Painting and Drawing",
+        "Graphic Design",
+        "Ceramic Art",
+        "Game Design",
+        "Fashion Design",
+        "Therapeutic Expressive Art",
+        "Jurisprudence and Legislation",
+        "Fundamentals of Religion",
+        "Islamic Banking"
+      ]
+    },
+    "Information Technology": {
+      "allowed_programs": [
+        "Biology and Biotechnology",
+        "Mathematics",
+        "Mathematics and Data Science",
+        "Physics",
+        "Applied Physics Technology",
+        "Chemistry",
+        "Applied Chemistry",
+        "Molecular Diagnostics Technology",
+        "Arabic Language and Literature",
+        "English Language and Literature",
+        "French Language",
+        "History",
+        "Geography",
+        "Tourism and Archaeology",
+        "Psychology – Psychological Counseling",
+        "Social Work",
+        "Physical Education",
+        "Kindergarten",
+        "Elementary School Teacher",
+        "Jurisprudence and Legislation",
+        "Fundamentals of Religion",
+        "Islamic Banking",
+        "Civil Engineering",
+        "Geomatic Engineering",
+        "Architectural Engineering",
+        "Construction Engineering",
+        "Planning Engineering",
+        "Mechanical Engineering",
+        "Chemical Engineering",
+        "Industrial Engineering",
+        "Computer Engineering",
+        "Electrical Engineering",
+        "Mechatronics Engineering",
+        "Energy and Environmental Engineering",
+        "Network Engineering",
+        "Computer Science",
+        "Computer Science in the Job Market",
+        "Management Information Systems",
+        "Cybersecurity",
+        "Digital Economy",
+        "Digital Media and Communication",
+        "Radio and Television",
+        "Public Relations",
+        "Accounting",
+        "Business Administration",
+        "Financial and Banking Sciences",
+        "Financial Technology",
+        "Digital Marketing and Communication",
+        "Investment and Real Estate Development",
+        "Business Intelligence",
+        "Veterinary Medicine",
+        "Nutrition and Food Processing",
+        "Agricultural Engineering",
+        "Political Science",
+        "Music",
+        "Interior Design",
+        "Painting and Drawing",
+        "Graphic Design",
+        "Ceramic Art",
+        "Game Design",
+        "Fashion Design",
+        "Therapeutic Expressive Art"
+      ]
+    },
+    "Entrepreneurship and Business": {
+      "allowed_programs": [
+        "Management Information Systems",
+        "Digital Economy",
+        "Digital Media and Communication",
+        "Radio and Television",
+        "Public Relations",
+        "Accounting",
+        "Business Administration",
+        "Financial and Banking Sciences",
+        "Financial Technology",
+        "Digital Marketing and Communication",
+        "Investment and Real Estate Development",
+        "Business Intelligence",
+        "Arabic Language and Literature",
+        "English Language and Literature",
+        "French Language",
+        "History",
+        "Geography",
+        "Tourism and Archaeology",
+        "Psychology – Psychological Counseling",
+        "Social Work",
+        "Physical Education",
+        "Kindergarten",
+        "Elementary School Teacher",
+        "Music",
+        "Interior Design",
+        "Painting and Drawing",
+        "Graphic Design",
+        "Ceramic Art",
+        "Game Design",
+        "Fashion Design",
+        "Therapeutic Expressive Art",
+        "Jurisprudence and Legislation",
+        "Fundamentals of Religion",
+        "Islamic Banking"
+      ]
+    }
+  },
+  "additional_conditions": {
+    "Engineering": "Students are admitted to engineering programs if their average GPA is 80% or higher in core subjects (Mathematics, Physics, Chemistry), provided the overall GPA is not less than 75%.",
+    "Human Medicine or Dentistry": "Students are admitted to the Human Medicine or Dentistry program if their average GPA is 85% or higher in core subjects (Mathematics, Physics, Biology, Chemistry), provided the overall GPA is not less than 80%.",
+    "Pharmacy": "Students are admitted to the Pharmacy program if their average GPA is 80% or higher in core subjects (Mathematics, Physics, Biology, Chemistry), provided the overall GPA is not less than 75%."
+  }
+}
